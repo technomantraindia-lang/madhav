@@ -1,0 +1,13 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Consistent Performance">
+  <circle cx="48" cy="48" r="44" fill="white"/>
+  <path d="M48 28V18" stroke="#FF5A14" stroke-width="5" stroke-linecap="round"/>
+  <path d="M48 78V68" stroke="#FF5A14" stroke-width="5" stroke-linecap="round"/>
+  <path d="M68 48H78" stroke="#FF5A14" stroke-width="5" stroke-linecap="round"/>
+  <path d="M18 48H28" stroke="#FF5A14" stroke-width="5" stroke-linecap="round"/>
+  <path d="M62.1 33.9L69.2 26.8" stroke="#FF5A14" stroke-width="5" stroke-linecap="round"/>
+  <path d="M26.8 69.2L33.9 62.1" stroke="#FF5A14" stroke-width="5" stroke-linecap="round"/>
+  <path d="M62.1 62.1L69.2 69.2" stroke="#FF5A14" stroke-width="5" stroke-linecap="round"/>
+  <path d="M26.8 26.8L33.9 33.9" stroke="#FF5A14" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="48" cy="48" r="17" stroke="#FF5A14" stroke-width="5"/>
+  <circle cx="48" cy="48" r="6" fill="#FF5A14"/>
+</svg>

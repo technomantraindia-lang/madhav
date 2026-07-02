@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 64 64" fill="none" role="img" aria-label="Soft PVC Molding icon">
+  <circle cx="32" cy="32" r="28" fill="#FF5B16"/>
+  <circle cx="32" cy="32" r="27" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+  <g stroke="#FFFFFF" stroke-width="2.35" stroke-linecap="round" stroke-linejoin="round">
+
+    <path d="M22 38 H42"/>
+    <circle cx="24" cy="38" r="2.8"/>
+    <circle cx="32" cy="38" r="2.8"/>
+    <circle cx="40" cy="38" r="2.8"/>
+    <path d="M25 38 V30 H36 V38"/>
+    <path d="M36 30 L41 25 V20 H31 V25"/>
+    <path d="M31 20 C31 16.8 33.5 14.5 36.5 14.5 C39.8 14.5 42 16.8 42 20"/>
+    <path d="M41 25 L46 29"/>
+    <path d="M20 44 H44"/>
+    <path d="M27 30 C28.5 27.5 31.5 27.5 33 30"/>
+
+  </g>
+</svg>

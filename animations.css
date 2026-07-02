@@ -1,0 +1,261 @@
+/* ============================================
+   PREMIUM ANIMATIONS — Madhav Polymers
+   Lightweight CSS + native scroll reveals
+   ============================================ */
+
+/* Hero entrance — CSS only, no JS blocking */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroBannerIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#header {
+  animation: heroFadeUp 0.45s ease forwards;
+}
+
+.hero-tagline { animation: heroFadeUp 0.5s ease 0.1s both; }
+.hero-title { animation: heroFadeUp 0.55s ease 0.2s both; }
+.hero-desc { animation: heroFadeUp 0.5s ease 0.3s both; }
+.hero-badges .badge:nth-child(1) { animation: heroFadeUp 0.45s ease 0.4s both; }
+.hero-badges .badge:nth-child(2) { animation: heroFadeUp 0.45s ease 0.48s both; }
+.hero-cta a:nth-child(1) { animation: heroFadeUp 0.45s ease 0.52s both; }
+.hero-cta a:nth-child(2) { animation: heroFadeUp 0.45s ease 0.58s both; }
+.hero-banner-img { animation: heroBannerIn 0.65s ease 0.15s both; }
+
+/* Scroll reveals */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Header — solid scroll state (no blur = faster) */
+.header {
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.header.header-scrolled {
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 4px 20px rgba(61, 31, 140, 0.08);
+}
+
+/* Nav underline */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 8px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--purple), var(--orange));
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Quote button */
+.btn-quote {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.btn-quote:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(255, 107, 0, 0.28);
+}
+.btn-quote:hover .btn-quote-icon {
+  transform: translateX(3px);
+}
+.btn-quote-icon {
+  transition: transform 0.25s ease;
+}
+
+/* CTA buttons */
+.btn-primary,
+.btn-outline {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.btn-primary:hover,
+.btn-outline:hover {
+  transform: translateY(-2px);
+}
+
+/* Product cards */
+.product-card {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card.is-hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(61, 31, 140, 0.12);
+}
+.product-card-icon img {
+  transition: transform 0.35s ease;
+}
+.product-card.is-hover .product-card-icon img {
+  transform: scale(1.06);
+}
+.product-card .learn-more {
+  transition: gap 0.25s ease, transform 0.25s ease;
+}
+.product-card.is-hover .learn-more {
+  gap: 10px;
+  transform: translateX(3px);
+}
+
+/* ISO bar */
+.iso-item {
+  transition: transform 0.25s ease;
+}
+.iso-item:hover {
+  transform: translateY(-3px);
+}
+.iso-icon-wrap img {
+  transition: transform 0.3s ease;
+}
+.iso-item:hover .iso-icon-wrap img {
+  transform: scale(1.08);
+}
+
+/* Industries */
+.industry-list li {
+  transition: transform 0.25s ease, background 0.25s ease, padding-left 0.25s ease;
+}
+.industry-list li:hover {
+  transform: translateX(5px);
+  background: rgba(61, 31, 140, 0.06);
+  padding-left: 14px;
+}
+.ind-icon img {
+  transition: transform 0.25s ease;
+}
+.industry-list li:hover .ind-icon img {
+  transform: scale(1.06);
+}
+
+/* Why Choose */
+.why-item {
+  transition: background 0.25s ease;
+}
+.why-item.is-hover {
+  background: rgba(254, 243, 233, 0.45);
+}
+.why-icon img {
+  transition: transform 0.3s ease;
+}
+.why-item.is-hover .why-icon img {
+  transform: scale(1.06);
+}
+
+/* Application cards */
+.app-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.app-card.is-hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(61, 31, 140, 0.12);
+}
+.app-img-container img {
+  transition: transform 0.45s ease;
+}
+.app-card.is-hover .app-img-container img {
+  transform: scale(1.05);
+}
+
+/* About */
+.stat-icon-wrap img {
+  transition: transform 0.3s ease;
+}
+.stat-card.counted .stat-icon-wrap img {
+  transform: scale(1.08);
+}
+
+/* Footer */
+.footer-logo-img {
+  transition: transform 0.3s ease;
+}
+.footer-logo:hover .footer-logo-img {
+  transform: scale(1.02);
+}
+.social-btn {
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+.social-btn:hover {
+  transform: translateY(-3px);
+}
+.footer-col ul li a,
+.footer-links a {
+  position: relative;
+}
+.footer-col ul li a::after,
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.footer-col ul li a:hover::after,
+.footer-links a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Mobile — minimal */
+@media (max-width: 767px) {
+  .product-card.is-hover,
+  .app-card.is-hover {
+    transform: none;
+  }
+  .reveal-on-scroll {
+    transform: translateY(10px);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  #header,
+  .hero-left > *,
+  .hero-banner-img {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
