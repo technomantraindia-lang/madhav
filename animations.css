@@ -24,7 +24,7 @@
   animation: heroFadeUp 0.45s ease forwards;
 }
 
-.hero-tagline { animation: heroFadeUp 0.5s ease 0.1s both; }
+.hero-trust { animation: heroFadeUp 0.5s ease 0.1s both; }
 .hero-title { animation: heroFadeUp 0.55s ease 0.2s both; }
 .hero-desc { animation: heroFadeUp 0.5s ease 0.3s both; }
 .hero-badges .badge:nth-child(1) { animation: heroFadeUp 0.45s ease 0.4s both; }
@@ -178,6 +178,9 @@
 }
 .app-img-container img {
   transition: transform 0.45s ease;
+}
+.app-img-container--portrait img {
+  transform-origin: center bottom;
 }
 .app-card.is-hover .app-img-container img {
   transform: scale(1.05);
