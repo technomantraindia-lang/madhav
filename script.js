@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('nav-menu');
+  const currentPage = document.body.getAttribute('data-page') || 'home';
 
   if (hamburger && navMenu) {
     hamburger.addEventListener('click', function () {
@@ -37,6 +38,31 @@ document.addEventListener('DOMContentLoaded', function () {
   const navLinks = document.querySelectorAll('.nav-link');
   let scrollTicking = false;
 
+  function currentFile() {
+    const path = window.location.pathname.split('/').pop();
+    return path || 'index.html';
+  }
+
+  function isSamePage(linkPath) {
+    if (!linkPath) return true;
+    const file = currentFile();
+    return linkPath === file || (linkPath === 'index.html' && file === '');
+  }
+
+  function setPageActiveNav() {
+    navLinks.forEach(function (link) {
+      const href = link.getAttribute('href') || '';
+      if (href.indexOf('#') !== -1) return;
+      link.classList.remove('active');
+      if (currentPage === 'home' && (href === 'index.html' || href === './index.html' || href === '/')) {
+        link.classList.add('active');
+      }
+      if (currentPage === 'about' && href.indexOf('about-us.html') !== -1) {
+        link.classList.add('active');
+      }
+    });
+  }
+
   function onScroll() {
     const y = window.scrollY;
 
@@ -50,9 +76,24 @@ document.addEventListener('DOMContentLoaded', function () {
         current = section.getAttribute('id');
       }
     });
+
+    setPageActiveNav();
+
     navLinks.forEach(function (link) {
-      const href = link.getAttribute('href');
-      link.classList.toggle('active', href === '#' + current);
+      const href = link.getAttribute('href') || '';
+      if (href.indexOf('#') === -1) return;
+
+      const parts = href.split('#');
+      const linkPath = parts[0];
+      const hash = parts[1];
+
+      if (!isSamePage(linkPath)) return;
+
+      if (hash && hash === current) {
+        link.classList.add('active');
+      } else if (hash) {
+        link.classList.remove('active');
+      }
     });
 
     scrollTicking = false;
@@ -73,11 +114,20 @@ document.addEventListener('DOMContentLoaded', function () {
     window.scrollTo({ top: top, behavior: 'smooth' });
   }
 
-  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+  document.querySelectorAll('a[href*="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
-      if (href === '#') return;
-      const target = document.querySelector(href);
+      if (!href || href === '#') return;
+
+      const parts = href.split('#');
+      const linkPath = parts[0];
+      const hash = parts[1];
+
+      if (linkPath && !isSamePage(linkPath)) return;
+
+      if (!hash) return;
+
+      const target = document.getElementById(hash);
       if (target) {
         e.preventDefault();
         scrollToTarget(target);
