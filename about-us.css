@@ -42,7 +42,7 @@
   justify-content: flex-start;
 }
 .au-hero-content {
-  max-width: 46%;
+  max-width: 52%;
   min-width: 300px;
   display: flex;
   flex-direction: column;
@@ -69,8 +69,25 @@
   font-size: 15px;
   color: #5a5a6a;
   line-height: 1.75;
-  max-width: 480px;
-  margin-bottom: 30px;
+  max-width: 520px;
+  margin-bottom: 16px;
+}
+.au-hero-desc p {
+  margin-bottom: 14px;
+}
+.au-hero-desc p:last-child {
+  margin-bottom: 0;
+}
+.au-hero-tagline {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--purple);
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+.au-hero-tagline strong {
+  font-weight: 800;
+  color: var(--orange);
 }
 .au-hero-cards {
   display: flex;
@@ -112,6 +129,46 @@
   font-weight: 800;
   color: var(--purple);
   margin-bottom: 1px;
+}
+
+/* ---- Mission & Vision ---- */
+.au-mission-vision {
+  padding: 56px var(--au-side-pad) 64px;
+  background: #fafafa;
+  width: 100%;
+}
+.au-mission-vision-grid {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.au-mv-card {
+  background: #fff;
+  border: 1px solid #ececec;
+  border-left: 4px solid var(--orange);
+  border-radius: 12px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+.au-mv-card .section-label {
+  margin-bottom: 10px;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+}
+.au-mv-card h2 {
+  font-size: clamp(22px, 2.5vw, 28px);
+  font-weight: 800;
+  color: var(--purple);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+.au-mv-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
 }
 
 /* ---- Innovation ---- */
@@ -571,7 +628,7 @@
   max-width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
   align-items: stretch;
 }
@@ -994,6 +1051,7 @@
   .au-hero-card {
     max-width: none;
   }
+  .au-mission-vision-grid { grid-template-columns: 1fr; }
   .au-manufacturing-grid,
   .au-impact-grid,
   .au-cta-grid { grid-template-columns: 1fr; }
@@ -1011,6 +1069,7 @@
   }
   .au-cta-right { justify-content: center; }
   .au-innovation,
+  .au-mission-vision,
   .au-values,
   .au-manufacturing,
   .au-impact,

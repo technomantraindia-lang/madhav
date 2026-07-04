@@ -57,6 +57,7 @@
     }
 
     const groups = [
+      { root: '.au-mission-vision-grid', type: 'up', childSel: '.au-mv-card', stagger: 0.15 },
       { root: '.au-innovation-center', type: 'right', childSel: ':scope > *', stagger: 0.1 },
       { root: '.au-innovation-list', type: 'up', childSel: '.au-innovation-item', stagger: 0.12 },
       { root: '.au-values-head', type: 'up', childSel: ':scope > *', stagger: 0.08 },
@@ -151,6 +152,7 @@
   function setupHovers() {
     if (isMobile) return;
     const hoverSelectors = [
+      '.au-mv-card',
       '.au-hero-card',
       '.au-innovation-item',
       '.au-value-card',
