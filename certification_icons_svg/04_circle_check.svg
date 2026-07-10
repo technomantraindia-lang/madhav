@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Circle Check</title>
+  <g fill="none" stroke="#5138A4" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="32" cy="32" r="20.3"/>
+    <path d="M22.9 31.8l6.4 6.4 13-14.5"/>
+    <path d="M42.8 15.7l3.8-4.2"/>
+  </g>
+</svg>

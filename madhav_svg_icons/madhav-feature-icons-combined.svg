@@ -1,0 +1,29 @@
+<svg width="760" height="120" viewBox="0 0 760 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .icon-text { font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 600; fill: #211A35; }
+  </style>
+  <g transform="translate(0,12)">
+    <circle cx="48" cy="48" r="38" fill="white"/>
+    <path d="M48 17L70 26V43C70 60.5 60.5 73 48 79C35.5 73 26 60.5 26 43V26L48 17Z" stroke="#5A2A86" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M38 47.5L44.6 54L59 39" stroke="#5A2A86" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="110" y="43" class="icon-text">Premium</text>
+    <text x="110" y="65" class="icon-text">Quality</text>
+  </g>
+  <g transform="translate(260,12)">
+    <circle cx="48" cy="48" r="38" fill="white"/>
+    <path d="M48 30V22M48 74V66M66 48H74M22 48H30M61 35L67 29M29 67L35 61M61 61L67 67M29 29L35 35" stroke="#FF5A14" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="48" cy="48" r="15" stroke="#FF5A14" stroke-width="4"/>
+    <circle cx="48" cy="48" r="5" fill="#FF5A14"/>
+    <text x="110" y="43" class="icon-text">Consistent</text>
+    <text x="110" y="65" class="icon-text">Performance</text>
+  </g>
+  <g transform="translate(535,12)">
+    <circle cx="48" cy="48" r="38" fill="white"/>
+    <path d="M23 74H73" stroke="#5A2A86" stroke-width="4" stroke-linecap="round"/>
+    <path d="M28 74V47L41 56V47L54 56V40H68V74" stroke="#5A2A86" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M58 40V29H65V40" stroke="#5A2A86" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M34 64H39M47 64H52M60 64H65" stroke="#5A2A86" stroke-width="4" stroke-linecap="round"/>
+    <text x="110" y="43" class="icon-text">Advanced</text>
+    <text x="110" y="65" class="icon-text">Manufacturing</text>
+  </g>
+</svg>

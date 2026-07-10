@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products – Madhav Polymers | PVC Compound, RP Compound &amp; Masterbatches</title>
+  <meta name="description" content="Explore Madhav Polymers' complete product range: PVC Compounds, RP Compounds, PVC Masterbatches, and Special Compounds engineered for every industry application." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <link rel="stylesheet" href="products.css" />
+</head>
+<body data-page="products">
+
+  <div id="site-header"></div>
+
+  <!-- ========== PRODUCTS HERO BANNER ========== -->
+  <section class="prod-hero" id="prod-hero">
+    <div class="prod-hero-wrap">
+      <img src="banner section.png" alt="Madhav Polymers product range" class="prod-hero-bg" fetchpriority="high" decoding="async" />
+      <div class="prod-hero-overlay"></div>
+      <div class="prod-hero-content">
+        <nav class="prod-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="bc-sep">&#8250;</span>
+          <span>Products</span>
+        </nav>
+        <h1 class="prod-hero-title">
+          Engineered Polymer<br>
+          <span class="ph-orange">Products for Every Industry</span>
+        </h1>
+        <p class="prod-hero-desc">
+          High-performance PVC compounds, masterbatches &amp; custom<br>
+          solutions engineered for durability, consistency and superior results.
+        </p>
+        <div class="prod-hero-badges">
+          <div class="prod-badge">
+            <div class="prod-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#3D1F8C" stroke-width="1.8" width="20" height="20"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <span>Advanced<br>Technology</span>
+          </div>
+          <div class="prod-badge">
+            <div class="prod-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#3D1F8C" stroke-width="1.8" width="20" height="20"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span>Consistent<br>Quality</span>
+          </div>
+          <div class="prod-badge">
+            <div class="prod-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#3D1F8C" stroke-width="1.8" width="20" height="20"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0 1 12 0v2"/></svg>
+            </div>
+            <span>Tailored for<br>Every Need</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BROWSE BY CATEGORY TABS ========== -->
+  <section class="cat-tabs-section" id="browse-category">
+    <div class="cat-tabs-wrap">
+      <p class="cat-label">Browse by Category</p>
+      <div class="cat-tabs" id="cat-tabs">
+        <button class="cat-tab active" id="cat-pvc" data-cat="pvc-compound">
+          <div class="cat-tab-icon">
+            <img src="madhav_product_icons_svg/pvc-compound-icon.svg" alt="" width="26" height="26" />
+          </div>
+          <div class="cat-tab-text">
+            <strong>PVC Compound</strong>
+            <span>High-quality PVC compounds for various applications</span>
+          </div>
+        </button>
+        <button class="cat-tab" id="cat-rp" data-cat="rp-compound">
+          <div class="cat-tab-icon">
+            <img src="madhav_product_icons_svg/rp-compound-icon.svg" alt="" width="26" height="26" />
+          </div>
+          <div class="cat-tab-text">
+            <strong>RP Compound</strong>
+            <span>Cost-effective, durable compounds for a wide range</span>
+          </div>
+        </button>
+        <button class="cat-tab" id="cat-mb" data-cat="masterbatch">
+          <div class="cat-tab-icon">
+            <img src="madhav_product_icons_svg/pvc-masterbatches-icon.svg" alt="" width="26" height="26" />
+          </div>
+          <div class="cat-tab-text">
+            <strong>PVC Masterbatches</strong>
+            <span>Vibrant colours &amp; consistent dispersion for perfect results</span>
+          </div>
+        </button>
+        <button class="cat-tab" id="cat-sp" data-cat="special-compound">
+          <div class="cat-tab-icon">
+            <img src="madhav_product_icons_svg/special-compounds-icon.svg" alt="" width="26" height="26" />
+          </div>
+          <div class="cat-tab-text">
+            <strong>Special Compounds</strong>
+            <span>Custom-engineered solutions for specific industrial needs</span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MAIN PRODUCT LISTING ========== -->
+  <section class="prod-listing-section" id="products">
+    <div class="prod-listing-wrap">
+
+      <!-- SIDEBAR -->
+      <aside class="prod-sidebar" id="prod-sidebar">
+
+        <div class="sidebar-block">
+          <h3 class="sidebar-heading">Quick Filters</h3>
+          <ul class="sidebar-filter-list">
+            <li>
+              <label class="sidebar-checkbox checked">
+                <input type="checkbox" checked id="filter-pvc" />
+                PVC Compounds
+                <span class="filter-count">24</span>
+              </label>
+            </li>
+            <li>
+              <label class="sidebar-checkbox">
+                <input type="checkbox" id="filter-rp" />
+                RP Compounds
+                <span class="filter-count">12</span>
+              </label>
+            </li>
+            <li>
+              <label class="sidebar-checkbox">
+                <input type="checkbox" id="filter-mb2" />
+                Masterbatches
+                <span class="filter-count">18</span>
+              </label>
+            </li>
+            <li>
+              <label class="sidebar-checkbox">
+                <input type="checkbox" id="filter-sp2" />
+                Special Compounds
+                <span class="filter-count">10</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-block">
+          <h3 class="sidebar-heading">Applications</h3>
+          <ul class="sidebar-filter-list">
+            <li><label class="sidebar-checkbox"><input type="checkbox" id="app-wire2" /> Wire &amp; Cable</label></li>
+            <li><label class="sidebar-checkbox"><input type="checkbox" id="app-pipe2" /> Pipes &amp; Fittings</label></li>
+            <li><label class="sidebar-checkbox"><input type="checkbox" id="app-foot2" /> Footwear</label></li>
+            <li><label class="sidebar-checkbox"><input type="checkbox" id="app-prof" /> Profile &amp; Building</label></li>
+            <li><label class="sidebar-checkbox"><input type="checkbox" id="app-hose" /> Hose &amp; Tubing</label></li>
+            <li><label class="sidebar-checkbox"><input type="checkbox" id="app-mold2" /> Molding &amp; Others</label></li>
+          </ul>
+          <button class="sidebar-view-more" id="view-more-apps">View More +</button>
+        </div>
+
+        <div class="sidebar-block">
+          <h3 class="sidebar-heading">Industries</h3>
+          <ul class="sidebar-filter-list">
+            <li><label class="sidebar-checkbox"><input type="checkbox" id="ind-elec" /> Electrical</label></li>
+            <li><label class="sidebar-checkbox"><input type="checkbox" id="ind-cons" /> Construction</label></li>
+            <li><label class="sidebar-checkbox"><input type="checkbox" id="ind-auto" /> Automotive</label></li>
+            <li><label class="sidebar-checkbox"><input type="checkbox" id="ind-foot3" /> Footwear</label></li>
+            <li><label class="sidebar-checkbox"><input type="checkbox" id="ind-pack" /> Packaging</label></li>
+            <li><label class="sidebar-checkbox"><input type="checkbox" id="ind-cg" /> Consumer Goods</label></li>
+          </ul>
+          <button class="sidebar-view-more" id="view-more-inds">View More +</button>
+        </div>
+
+        <div class="sidebar-block">
+          <h3 class="sidebar-heading">Certifications</h3>
+          <ul class="sidebar-cert-list">
+            <li class="cert-item">
+              <div class="cert-icon-wrap">
+                <img src="exact-feature-icons-svg-pack/iso-9001-certified-company.svg" alt="ISO" width="30" height="30" />
+              </div>
+              <div class="cert-text">
+                <strong>ISO 9001:2015</strong>
+                <span>Certified Company</span>
+              </div>
+            </li>
+            <li class="cert-item">
+              <div class="cert-icon-wrap">
+                <img src="exact-feature-icons-svg-pack/premium-quality-shield.svg" alt="RoHS" width="30" height="30" />
+              </div>
+              <div class="cert-text">
+                <strong>RoHS Compliant</strong>
+                <span>Environmentally Responsible</span>
+              </div>
+            </li>
+            <li class="cert-item">
+              <div class="cert-icon-wrap">
+                <img src="exact-feature-icons-svg-pack/consistent-performance-gear.svg" alt="REACH" width="30" height="30" />
+              </div>
+              <div class="cert-text">
+                <strong>REACH Compliant</strong>
+                <span>Safe &amp; Sustainable</span>
+              </div>
+            </li>
+            <li class="cert-item">
+              <div class="cert-icon-wrap">
+                <img src="exact-feature-icons-svg-pack/advanced-manufacturing-robotic-arm.svg" alt="Quality" width="30" height="30" />
+              </div>
+              <div class="cert-text">
+                <strong>Consistent Quality</strong>
+                <span>Batch-to-batch Consistency</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </aside>
+
+      <!-- PRODUCT GRID -->
+      <div class="prod-grid-area">
+
+        <!-- FILTER BAR -->
+        <div class="prod-filter-bar" id="prod-filter-bar">
+          <div class="filter-bar-left">
+            <button class="filter-pill active" id="fp-all">All Products</button>
+            <button class="filter-dropdown-btn" id="fp-app">By Application <span>&#9662;</span></button>
+            <button class="filter-dropdown-btn" id="fp-ind">By Industry <span>&#9662;</span></button>
+            <button class="filter-dropdown-btn" id="fp-perf">By Performance <span>&#9662;</span></button>
+            <button class="filter-dropdown-btn" id="fp-color">By Color <span>&#9662;</span></button>
+          </div>
+          <div class="filter-bar-right">
+            <span class="sort-label">Sort by:</span>
+            <select id="sort-select" class="sort-select">
+              <option>Featured</option>
+              <option>Newest</option>
+              <option>Name A&ndash;Z</option>
+            </select>
+            <div class="view-toggle">
+              <button class="view-btn active" id="view-grid-btn" aria-label="Grid view">
+                <svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><rect x="0" y="0" width="6" height="6" rx="1"/><rect x="10" y="0" width="6" height="6" rx="1"/><rect x="0" y="10" width="6" height="6" rx="1"/><rect x="10" y="10" width="6" height="6" rx="1"/></svg>
+              </button>
+              <button class="view-btn" id="view-list-btn" aria-label="List view">
+                <svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><rect x="0" y="1" width="16" height="2" rx="1"/><rect x="0" y="7" width="16" height="2" rx="1"/><rect x="0" y="13" width="16" height="2" rx="1"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARDS -->
+        <div class="prod-cards-grid" id="prod-cards-grid">
+
+          <article class="prod-card" id="pc-wire-cable" data-cat="pvc-compound" data-app="wire" data-ind="elec auto" data-date="2025-10-01" data-featured="1">
+            <div class="prod-card-img">
+              <img src="Wire &amp; Cables.png" alt="Wire &amp; Cable Compounds" loading="lazy" />
+              <span class="prod-cat-badge badge-pvc">PVC Compound</span>
+            </div>
+            <div class="prod-card-body">
+              <h3>Wire &amp; Cable Compounds</h3>
+              <p>Flexible, flame-retardant compounds ensuring high conductivity and safety.</p>
+              <a href="product-details.html" class="prod-view-link" id="pvc-wire-link">View Product Range <span>&#8594;</span></a>
+            </div>
+          </article>
+
+          <article class="prod-card" id="pc-pipes-fittings" data-cat="pvc-compound" data-app="pipe" data-ind="cons" data-date="2025-11-15" data-featured="2">
+            <div class="prod-card-img">
+              <img src="pipe 7 fitting.png" alt="Pipes &amp; Fittings Compounds" loading="lazy" />
+              <span class="prod-cat-badge badge-pvc">PVC Compound</span>
+            </div>
+            <div class="prod-card-body">
+              <h3>Pipes &amp; Fittings Compounds</h3>
+              <p>Durable solutions for pressure pipes and rigid fittings.</p>
+              <a href="#" class="prod-view-link" id="pvc-pipes-link">View Product Range <span>&#8594;</span></a>
+            </div>
+          </article>
+
+          <article class="prod-card" id="pc-footwear" data-cat="pvc-compound" data-app="footwear" data-ind="foot" data-date="2026-02-10" data-featured="3">
+            <div class="prod-card-img">
+              <img src="Footwear.png" alt="Footwear Compounds" loading="lazy" />
+              <span class="prod-cat-badge badge-pvc">PVC Compound</span>
+            </div>
+            <div class="prod-card-body">
+              <h3>Footwear Compounds</h3>
+              <p>Comfortable, durable compounds with excellent finish.</p>
+              <a href="#" class="prod-view-link" id="pvc-footwear-link">View Product Range <span>&#8594;</span></a>
+            </div>
+          </article>
+
+          <article class="prod-card" id="pc-soft-pvc" data-cat="pvc-compound" data-app="mold" data-ind="cg auto" data-date="2026-01-20" data-featured="4">
+            <div class="prod-card-img">
+              <img src="Soft PVC Molding.png" alt="Soft PVC Molding Compounds" loading="lazy" />
+              <span class="prod-cat-badge badge-pvc">PVC Compound</span>
+            </div>
+            <div class="prod-card-body">
+              <h3>Soft PVC Molding Compounds</h3>
+              <p>Versatile compounds for soft molding applications.</p>
+              <a href="#" class="prod-view-link" id="pvc-soft-link">View Product Range <span>&#8594;</span></a>
+            </div>
+          </article>
+
+          <article class="prod-card" id="pc-upvc-profiles" data-cat="pvc-compound" data-app="profile" data-ind="cons" data-date="2025-12-05" data-featured="5">
+            <div class="prod-card-img">
+              <img src="upvc.png" alt="UPVC Profiles Compounds" loading="lazy" />
+              <span class="prod-cat-badge badge-pvc">PVC Compound</span>
+            </div>
+            <div class="prod-card-body">
+              <h3>UPVC Profiles Compounds</h3>
+              <p>Strong, weather-resistant compounds for profiles and doors.</p>
+              <a href="#" class="prod-view-link" id="pvc-upvc-link">View Product Range <span>&#8594;</span></a>
+            </div>
+          </article>
+
+          <article class="prod-card" id="pc-hose-tubing" data-cat="pvc-compound" data-app="hose" data-ind="cons cg" data-date="2026-03-01" data-featured="6">
+            <div class="prod-card-img">
+              <img src="PVC Hose Pipe.png" alt="Hose &amp; Tubing Compounds" loading="lazy" />
+              <span class="prod-cat-badge badge-pvc">PVC Compound</span>
+            </div>
+            <div class="prod-card-body">
+              <h3>Hose &amp; Tubing Compounds</h3>
+              <p>Flexible, pressure-resistant compounds for smooth flow.</p>
+              <a href="#" class="prod-view-link" id="pvc-hose-link">View Product Range <span>&#8594;</span></a>
+            </div>
+          </article>
+
+          <article class="prod-card" id="pc-transparent" data-cat="pvc-compound" data-app="mold" data-ind="pack cg" data-date="2026-04-12" data-featured="7">
+            <div class="prod-card-img">
+              <img src="white_pvc_pellets_card_cut_1024x1536.png" alt="Transparent PVC Compounds" loading="lazy" />
+              <span class="prod-cat-badge badge-pvc">PVC Compound</span>
+            </div>
+            <div class="prod-card-body">
+              <h3>Transparent PVC Compounds</h3>
+              <p>Crystal clear compounds with excellent clarity and finish.</p>
+              <a href="#" class="prod-view-link" id="pvc-transp-link">View Product Range <span>&#8594;</span></a>
+            </div>
+          </article>
+
+          <!-- Recycled PVC (RP) Compounds -->
+          <article class="prod-card" id="pc-rp-extrusion" data-cat="rp-compound" data-app="pipe profile" data-ind="cons" data-date="2026-05-20" data-featured="8">
+            <div class="prod-card-img">
+              <img src="pipe 7 fitting.png" alt="Recycled PVC Extrusion Compounds" loading="lazy" />
+              <span class="prod-cat-badge badge-sp">RP Compound</span>
+            </div>
+            <div class="prod-card-body">
+              <h3>Recycled PVC Extrusion Compounds</h3>
+              <p>Cost-effective recycled compounds perfect for manufacturing pipes and outdoor profiles.</p>
+              <a href="#" class="prod-view-link" id="rp-extrusion-link">View Product Range <span>&#8594;</span></a>
+            </div>
+          </article>
+
+          <article class="prod-card" id="pc-rp-footwear" data-cat="rp-compound" data-app="footwear" data-ind="foot" data-date="2026-06-05" data-featured="9">
+            <div class="prod-card-img">
+              <img src="Footwear.png" alt="Recycled PVC Footwear Compounds" loading="lazy" />
+              <span class="prod-cat-badge badge-sp">RP Compound</span>
+            </div>
+            <div class="prod-card-body">
+              <h3>Recycled PVC Footwear Compounds</h3>
+              <p>Eco-friendly recycled compounds engineered for durable and flexible shoe soles.</p>
+              <a href="#" class="prod-view-link" id="rp-footwear-link">View Product Range <span>&#8594;</span></a>
+            </div>
+          </article>
+
+          <article class="prod-card" id="pc-colored-mb" data-cat="masterbatch" data-app="wire pipe footwear profile hose mold" data-ind="elec cons auto foot pack cg" data-date="2025-08-01" data-featured="10">
+            <div class="prod-card-img">
+              <img src="Untitled design.png" alt="Colored Masterbatches" loading="lazy" />
+              <span class="prod-cat-badge badge-mb">Masterbatch</span>
+            </div>
+            <div class="prod-card-body">
+              <h3>Colored Masterbatches</h3>
+              <p>Wide range of vibrant colors with excellent dispersion.</p>
+              <a href="#" class="prod-view-link" id="mb-colored-link">View Product Range <span>&#8594;</span></a>
+            </div>
+          </article>
+
+          <article class="prod-card" id="pc-black-mb" data-cat="masterbatch" data-app="wire pipe footwear profile hose mold" data-ind="elec cons auto foot pack cg" data-date="2025-09-01" data-featured="11">
+            <div class="prod-card-img">
+              <img src="Untitled design-2.png" alt="Black Masterbatches" loading="lazy" />
+              <span class="prod-cat-badge badge-mb">Masterbatch</span>
+            </div>
+            <div class="prod-card-body">
+              <h3>Black Masterbatches</h3>
+              <p>High jetness, UV stable &amp; consistent black shades.</p>
+              <a href="#" class="prod-view-link" id="mb-black-link">View Product Range <span>&#8594;</span></a>
+            </div>
+          </article>
+
+          <article class="prod-card" id="pc-filler-mb" data-cat="masterbatch" data-app="pipe footwear profile mold" data-ind="cons foot pack cg" data-date="2025-07-01" data-featured="12">
+            <div class="prod-card-img">
+              <img src="Untitled design-1.png" alt="Filler Masterbatches" loading="lazy" />
+              <span class="prod-cat-badge badge-mb">Masterbatch</span>
+            </div>
+            <div class="prod-card-body">
+              <h3>Filler Masterbatches</h3>
+              <p>Cost-effective solutions with improved performance.</p>
+              <a href="#" class="prod-view-link" id="mb-filler-link">View Product Range <span>&#8594;</span></a>
+            </div>
+          </article>
+
+          <article class="prod-card" id="pc-custom" data-cat="special-compound" data-app="wire pipe footwear profile hose mold" data-ind="elec cons auto foot pack cg" data-date="2026-05-01" data-featured="13">
+            <div class="prod-card-img">
+              <img src="Untitled design-3.png" alt="Custom Compounds" loading="lazy" />
+              <span class="prod-cat-badge badge-sp">Special Compounds</span>
+            </div>
+            <div class="prod-card-body">
+              <h3>Custom Compounds</h3>
+              <p>Tailored compounds designed for your unique requirements.</p>
+              <a href="#" class="prod-view-link" id="sp-custom-link">View Product Range <span>&#8594;</span></a>
+            </div>
+          </article>
+
+          <article class="prod-card" id="pc-app-specific" data-cat="special-compound" data-app="wire pipe footwear profile hose mold" data-ind="elec cons auto foot pack cg" data-date="2026-06-01" data-featured="14">
+            <div class="prod-card-img prod-card-icon-bg">
+              <div class="prod-icon-placeholder">
+                <img src="madhav-polymers-svg-icons/injection-molding.svg" alt="Application-Specific" width="72" height="72" loading="lazy" />
+              </div>
+              <span class="prod-cat-badge badge-sp">Special Compounds</span>
+            </div>
+            <div class="prod-card-body">
+              <h3>Application-Specific Solutions</h3>
+              <p>Specially engineered for demanding industrial applications.</p>
+              <a href="#" class="prod-view-link" id="sp-appspec-link">View Product Range <span>&#8594;</span></a>
+            </div>
+          </article>
+
+        </div><!-- /prod-cards-grid -->
+      </div><!-- /prod-grid-area -->
+    </div><!-- /prod-listing-wrap -->
+  </section>
+
+  <!-- ========== WHY CHOOSE MADHAV POLYMERS ========== -->
+  <section class="why-choose-section" id="why-choose">
+    <div class="why-choose-wrap">
+      <p class="wc-title-label">WHY CHOOSE MADHAV POLYMERS?</p>
+      <div class="wc-grid">
+        <div class="wc-item" id="wc-quality">
+          <div class="wc-icon">
+            <img src="exact-feature-icons-svg-pack/premium-quality-shield.svg" alt="Consistent Quality" width="52" height="52" />
+          </div>
+          <div class="wc-text">
+            <h4>Consistent Quality</h4>
+            <p>Batch-to-batch consistency you can trust.</p>
+          </div>
+        </div>
+        <div class="wc-item" id="wc-mfg">
+          <div class="wc-icon">
+            <img src="exact-feature-icons-svg-pack/advanced-manufacturing-robotic-arm.svg" alt="Advanced Manufacturing" width="52" height="52" />
+          </div>
+          <div class="wc-text">
+            <h4>Advanced Manufacturing</h4>
+            <p>State-of-the-art facilities and technology.</p>
+          </div>
+        </div>
+        <div class="wc-item" id="wc-focused">
+          <div class="wc-icon">
+            <img src="madhav-polymers-svg-icons/custom-solutions-puzzle.svg" alt="Application Focused" width="52" height="52" />
+          </div>
+          <div class="wc-text">
+            <h4>Application Focused</h4>
+            <p>Tailored solutions for every industry need.</p>
+          </div>
+        </div>
+        <div class="wc-item" id="wc-delivery">
+          <div class="wc-icon">
+            <img src="exact-feature-icons-svg-pack/timely-delivery-truck.svg" alt="Timely Delivery" width="52" height="52" />
+          </div>
+          <div class="wc-text">
+            <h4>Timely Delivery</h4>
+            <p>On-time supply to keep your business moving.</p>
+          </div>
+        </div>
+        <div class="wc-item" id="wc-qc">
+          <div class="wc-icon">
+            <img src="madhav-polymers-svg-icons/strict-quality-control-shield.svg" alt="Strict Quality Control" width="52" height="52" />
+          </div>
+          <div class="wc-text">
+            <h4>Strict Quality Control</h4>
+            <p>Every batch tested for reliability and safety.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INDUSTRIES WE SERVE ========== -->
+  <section class="prod-industries-section" id="industries-serve">
+    <div class="prod-industries-wrap">
+      <h2 class="prod-industries-title">Industries We Serve</h2>
+      <div class="prod-ind-carousel-wrap">
+        <button class="ind-btn prev" id="ind-prev" aria-label="Previous">&#8249;</button>
+        <div class="prod-ind-track-outer">
+          <div class="prod-ind-track" id="prod-ind-track">
+            <div class="prod-ind-slide" id="ind-slide-elec">
+              <div class="prod-ind-img">
+                <img src="INDUSTRIES WE SERVE.png" alt="Electrical &amp; Electronics" loading="lazy" />
+              </div>
+              <p>Electrical &amp; Electronics</p>
+            </div>
+            <div class="prod-ind-slide" id="ind-slide-cons">
+              <div class="prod-ind-img">
+                <img src="about banner.png" alt="Construction" loading="lazy" />
+              </div>
+              <p>Construction</p>
+            </div>
+            <div class="prod-ind-slide" id="ind-slide-auto">
+              <div class="prod-ind-img">
+                <img src="Untitled design-3.png" alt="Automotive" loading="lazy" />
+              </div>
+              <p>Automotive</p>
+            </div>
+            <div class="prod-ind-slide" id="ind-slide-foot">
+              <div class="prod-ind-img">
+                <img src="Footwear.png" alt="Footwear" loading="lazy" />
+              </div>
+              <p>Footwear</p>
+            </div>
+            <div class="prod-ind-slide" id="ind-slide-pack">
+              <div class="prod-ind-img">
+                <img src="Untitled design-1.png" alt="Packaging" loading="lazy" />
+              </div>
+              <p>Packaging</p>
+            </div>
+            <div class="prod-ind-slide" id="ind-slide-home">
+              <div class="prod-ind-img">
+                <img src="PVC Hose Pipe.png" alt="Home &amp; Appliances" loading="lazy" />
+              </div>
+              <p>Home &amp; Appliances</p>
+            </div>
+            <div class="prod-ind-slide" id="ind-slide-cg">
+              <div class="prod-ind-img">
+                <img src="Untitled design.png" alt="Consumer Goods" loading="lazy" />
+              </div>
+              <p>Consumer Goods</p>
+            </div>
+            <div class="prod-ind-slide" id="ind-slide-agri">
+              <div class="prod-ind-img">
+                <img src="upvc.png" alt="Agriculture" loading="lazy" />
+              </div>
+              <p>Agriculture</p>
+            </div>
+          </div>
+        </div>
+        <button class="ind-btn next" id="ind-next" aria-label="Next">&#8250;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA SECTION ========== -->
+  <section class="prod-cta-section" id="prod-cta">
+    <div class="prod-cta-wrap">
+      <div class="prod-cta-text">
+        <h2>Can't Find What You're Looking For?</h2>
+        <p>Our team of experts is ready to help you find the right solution for your specific needs.</p>
+      </div>
+      <div class="prod-cta-btns">
+        <a href="index.html#contact" class="cta-btn-outline" id="cta-quote-btn">
+          Request a Quote &#9660;
+        </a>
+        <a href="index.html#contact" class="cta-btn-orange" id="cta-discuss-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Discuss Your Requirement &#8594;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script src="layout.js"></script>
+  <script src="animations.js"></script>
+  <script src="script.js"></script>
+  <script src="products.js"></script>
+</body>
+</html>
