@@ -519,41 +519,44 @@
 .res-article-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 24px;
+  align-items: stretch;
 }
 
 .res-article-card {
   display: flex;
   background: var(--white);
-  border: 1px solid var(--res-card-border);
-  border-radius: 14px;
+  border: 1px solid #e8eaf2;
+  border-radius: 16px;
   overflow: hidden;
-  min-height: 160px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+  min-height: 210px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .res-article-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(61, 31, 140, 0.08);
+  box-shadow: 0 12px 28px rgba(61, 31, 140, 0.1);
 }
 
 .res-article-thumb {
-  width: 38%;
-  min-width: 120px;
+  width: 42%;
+  min-width: 132px;
   flex-shrink: 0;
   overflow: hidden;
-  background: #eee;
+  background: #eef0f6;
 }
 
 .res-article-thumb img {
   width: 100%;
   height: 100%;
+  min-height: 210px;
   object-fit: cover;
+  display: block;
 }
 
 .res-article-body {
-  padding: 16px 16px 14px;
+  padding: 20px 18px 18px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -563,57 +566,66 @@
 .res-article-meta {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   flex-wrap: wrap;
 }
 
 .res-article-tag {
-  font-size: 9.5px;
+  font-size: 10px;
   font-weight: 800;
-  letter-spacing: 0.8px;
-  padding: 3px 8px;
-  border-radius: 4px;
+  letter-spacing: 0.7px;
+  padding: 4px 10px;
+  border-radius: 5px;
   text-transform: uppercase;
+  line-height: 1.2;
 }
 
-.res-article-tag--tech { background: #ede9fe; color: var(--purple); }
+.res-article-tag--tech { background: #ede9fe; color: #4c1d95; }
 .res-article-tag--industry { background: #ffedd5; color: #c2410c; }
-.res-article-tag--quality { background: #dcfce7; color: #15803d; }
+.res-article-tag--quality { background: #dcfce7; color: #166534; }
 
 .res-article-date {
-  font-size: 10.5px;
-  color: #999;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  white-space: nowrap;
 }
 
 .res-article-body h3 {
-  font-size: 14px;
-  font-weight: 750;
-  color: var(--purple);
-  line-height: 1.35;
-  margin-bottom: 6px;
+  font-size: clamp(14px, 1.05vw, 16px);
+  font-weight: 800;
+  color: #1a1247;
+  line-height: 1.45;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
 }
 
 .res-article-body p {
-  font-size: 11.5px;
-  color: var(--res-muted);
-  line-height: 1.5;
+  font-size: 13px;
+  font-weight: 500;
+  color: #3f4654;
+  line-height: 1.65;
   flex: 1;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .res-read-more {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  font-size: 12px;
+  gap: 6px;
+  font-size: 13px;
   font-weight: 700;
-  color: #2563EB;
+  color: #2563eb;
   margin-top: auto;
-  transition: gap 0.2s;
+  transition: gap 0.2s, color 0.2s;
 }
 
-.res-read-more:hover { gap: 8px; }
+.res-read-more:hover {
+  gap: 9px;
+  color: #1d4ed8;
+}
 
 .res-read-more svg {
   width: 12px;
@@ -626,21 +638,35 @@
 /* ==========================================
    TOOLS & SUPPORT
    ========================================== */
+.res-tools .text-center {
+  margin-bottom: 36px;
+}
+
+.res-tools .res-section-desc {
+  font-size: 16px;
+  font-weight: 500;
+  color: #4b5563;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+  word-spacing: 0.06em;
+  max-width: 720px;
+}
+
 .res-tools-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  gap: 20px;
 }
 
 .res-tool-card {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   background: var(--white);
-  border: 1px solid var(--res-card-border);
-  border-radius: 14px;
-  padding: 18px 16px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e8eaf2;
+  border-radius: 16px;
+  padding: 22px 18px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   color: inherit;
   text-decoration: none;
@@ -648,12 +674,12 @@
 
 .res-tool-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(61, 31, 140, 0.08);
+  box-shadow: 0 12px 28px rgba(61, 31, 140, 0.1);
 }
 
 .res-tool-icon {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -662,8 +688,8 @@
 }
 
 .res-tool-icon img {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
 }
 
@@ -678,21 +704,27 @@
 }
 
 .res-tool-text h3 {
-  font-size: 14px;
-  font-weight: 750;
-  color: var(--purple);
-  margin-bottom: 4px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #1a1247;
+  margin-bottom: 6px;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  word-spacing: 0.04em;
 }
 
 .res-tool-text p {
-  font-size: 11.5px;
-  color: var(--res-muted);
-  line-height: 1.45;
+  font-size: 13px;
+  font-weight: 500;
+  color: #3f4654;
+  line-height: 1.65;
+  letter-spacing: 0.015em;
+  word-spacing: 0.05em;
 }
 
 .res-tool-arrow {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   border: 1px solid #dcdce6;
   background: var(--white);
@@ -838,7 +870,9 @@
   }
 
   .res-hero-stats-inner { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .res-article-grid { grid-template-columns: 1fr; }
+  .res-article-grid { grid-template-columns: 1fr; gap: 18px; }
+  .res-article-card { min-height: auto; }
+  .res-article-thumb img { min-height: 180px; }
   .res-newsletter {
     grid-template-columns: 1fr;
     text-align: center;
@@ -898,7 +932,9 @@
   .res-cat-grid,
   .res-downloads-grid { grid-template-columns: 1fr; }
   .res-article-card { flex-direction: column; }
-  .res-article-thumb { width: 100%; height: 140px; }
+  .res-article-thumb { width: 100%; min-width: 0; }
+  .res-article-thumb img { min-height: 180px; height: 180px; }
+  .res-article-body { padding: 20px 20px 18px; }
   .res-newsletter-form { flex-direction: column; width: 100%; }
   .res-newsletter-form input,
   .res-newsletter-form button { width: 100%; justify-content: center; }
