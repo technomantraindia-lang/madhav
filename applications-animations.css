@@ -1,0 +1,12 @@
+/* Applications — GSAP animation helpers (layout unchanged at rest) */
+
+.process-timeline::before {
+  transform: scaleX(var(--line-scale, 1));
+  transform-origin: left center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process-timeline::before {
+    transform: none;
+  }
+}

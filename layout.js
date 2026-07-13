@@ -32,22 +32,16 @@
               '</ul>' +
             '</li>' +
             '<li class="has-dropdown">' +
-              '<a href="index.html#applications" class="nav-link" id="nav-apps">Applications <span class="arrow">&#9662;</span></a>' +
+              '<a href="applications.html" class="' + navClass('applications').trim() + '" id="nav-apps">Applications <span class="arrow">&#9662;</span></a>' +
               '<ul class="dropdown">' +
-                '<li><a href="#" id="nav-app-wire">Wire &amp; Cable</a></li>' +
-                '<li><a href="#" id="nav-app-pipe">PVC Pipes</a></li>' +
-                '<li><a href="#" id="nav-app-foot">Footwear</a></li>' +
-                '<li><a href="#" id="nav-app-mold">Soft PVC Molding</a></li>' +
+                '<li><a href="applications.html#wire-cable" id="nav-app-wire">Wire &amp; Cable</a></li>' +
+                '<li><a href="applications.html#pipes-fittings" id="nav-app-pipe">PVC Pipes</a></li>' +
+                '<li><a href="applications.html#footwear" id="nav-app-foot">Footwear</a></li>' +
+                '<li><a href="applications.html#molding-others" id="nav-app-mold">Soft PVC Molding</a></li>' +
               '</ul>' +
             '</li>' +
+            '<li><a href="resources.html" class="' + navClass('resources').trim() + '" id="nav-resources">Resources</a></li>' +
             '<li><a href="quality.html" class="' + navClass('quality').trim() + '" id="nav-quality">Quality</a></li>' +
-            '<li class="has-dropdown">' +
-              '<a href="#" class="nav-link" id="nav-resources">Resources <span class="arrow">&#9662;</span></a>' +
-              '<ul class="dropdown">' +
-                '<li><a href="#" id="nav-downloads">Downloads</a></li>' +
-                '<li><a href="#" id="nav-certs">Certifications</a></li>' +
-              '</ul>' +
-            '</li>' +
             '<li><a href="index.html#contact" class="nav-link" id="nav-contact">Contact Us</a></li>' +
           '</ul>' +
         '</nav>' +
@@ -89,9 +83,9 @@
           '<ul>' +
             '<li><a href="about-us.html" id="foot-about">About Us</a></li>' +
             '<li><a href="products.html" id="foot-products">Our Products</a></li>' +
-            '<li><a href="index.html#applications" id="foot-apps">Applications</a></li>' +
+            '<li><a href="applications.html" id="foot-apps">Applications</a></li>' +
             '<li><a href="quality.html" id="foot-quality">Quality</a></li>' +
-            '<li><a href="#" id="foot-resources">Resources</a></li>' +
+            '<li><a href="resources.html" id="foot-resources">Resources</a></li>' +
             '<li><a href="index.html#contact" id="foot-contact">Contact Us</a></li>' +
           '</ul>' +
         '</div>' +
