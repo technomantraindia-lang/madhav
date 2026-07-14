@@ -34,25 +34,25 @@
             '<li class="has-dropdown">' +
               '<a href="applications.html" class="' + navClass('applications').trim() + '" id="nav-apps">Applications <span class="arrow">&#9662;</span></a>' +
               '<ul class="dropdown">' +
-                '<li><a href="applications.html#wire-cable" id="nav-app-wire">Wire &amp; Cable</a></li>' +
-                '<li><a href="applications.html#pipes-fittings" id="nav-app-pipe">PVC Pipes</a></li>' +
-                '<li><a href="applications.html#footwear" id="nav-app-foot">Footwear</a></li>' +
-                '<li><a href="applications.html#molding-others" id="nav-app-mold">Soft PVC Molding</a></li>' +
+                '<li><a href="application-details.html?app=wire-cable" id="nav-app-wire">Wire &amp; Cable</a></li>' +
+                '<li><a href="application-details.html?app=pipes-fittings" id="nav-app-pipe">PVC Pipes</a></li>' +
+                '<li><a href="application-details.html?app=footwear" id="nav-app-foot">Footwear</a></li>' +
+                '<li><a href="application-details.html?app=molding-others" id="nav-app-mold">Soft PVC Molding</a></li>' +
               '</ul>' +
             '</li>' +
             '<li><a href="resources.html" class="' + navClass('resources').trim() + '" id="nav-resources">Resources</a></li>' +
             '<li><a href="quality.html" class="' + navClass('quality').trim() + '" id="nav-quality">Quality</a></li>' +
-            '<li><a href="index.html#contact" class="nav-link" id="nav-contact">Contact Us</a></li>' +
+            '<li><a href="contact-us.html" class="' + navClass('contact').trim() + '" id="nav-contact">Contact Us</a></li>' +
           '</ul>' +
         '</nav>' +
-        '<a href="index.html#contact" class="btn-quote" id="get-quote-btn">' +
+        '<button type="button" class="btn-quote" id="get-quote-btn" aria-haspopup="dialog" aria-controls="quote-modal">' +
           'Get a Quote' +
           '<span class="btn-quote-icon" aria-hidden="true">' +
             '<svg viewBox="0 0 24 24" fill="none" width="14" height="14">' +
               '<path d="M5 12h12M13 8l4 4-4 4" stroke="#FF6B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
             '</svg>' +
           '</span>' +
-        '</a>' +
+        '</button>' +
         '<button class="hamburger" id="hamburger" aria-label="Toggle menu">' +
           '<span></span><span></span><span></span>' +
         '</button>' +
@@ -86,7 +86,7 @@
             '<li><a href="applications.html" id="foot-apps">Applications</a></li>' +
             '<li><a href="quality.html" id="foot-quality">Quality</a></li>' +
             '<li><a href="resources.html" id="foot-resources">Resources</a></li>' +
-            '<li><a href="index.html#contact" id="foot-contact">Contact Us</a></li>' +
+            '<li><a href="contact-us.html" id="foot-contact">Contact Us</a></li>' +
           '</ul>' +
         '</div>' +
         '<div class="footer-col">' +
@@ -132,9 +132,99 @@
       '</div>' +
     '</footer>';
 
+  var quoteModalHTML =
+    '<div class="quote-modal" id="quote-modal" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title" hidden>' +
+      '<div class="quote-modal-backdrop" data-quote-close></div>' +
+      '<div class="quote-modal-dialog" role="document">' +
+        '<button type="button" class="quote-modal-close" data-quote-close aria-label="Close quote form">' +
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="18" height="18"><path d="M6 6l12 12M18 6L6 18"/></svg>' +
+        '</button>' +
+        '<div class="quote-modal-head">' +
+          '<span class="quote-modal-pill">Request a Quote</span>' +
+          '<h2 id="quote-modal-title">Get a Quote</h2>' +
+          '<p>Share your requirements and our team will get back to you within 24 hours.</p>' +
+        '</div>' +
+        '<form class="quote-form" id="quote-form" novalidate>' +
+          '<div class="quote-form-row">' +
+            '<label class="quote-field">' +
+              '<span class="quote-label">Full Name <em>*</em></span>' +
+              '<input type="text" name="fullName" placeholder="Enter your full name" required autocomplete="name" />' +
+            '</label>' +
+            '<label class="quote-field">' +
+              '<span class="quote-label">Email Address <em>*</em></span>' +
+              '<input type="email" name="email" placeholder="name@company.com" required autocomplete="email" />' +
+            '</label>' +
+          '</div>' +
+          '<div class="quote-form-row">' +
+            '<label class="quote-field">' +
+              '<span class="quote-label">Phone Number <em>*</em></span>' +
+              '<input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required autocomplete="tel" />' +
+            '</label>' +
+            '<label class="quote-field">' +
+              '<span class="quote-label">Company Name <em>*</em></span>' +
+              '<input type="text" name="company" placeholder="Your company name" required autocomplete="organization" />' +
+            '</label>' +
+          '</div>' +
+          '<div class="quote-form-row">' +
+            '<label class="quote-field">' +
+              '<span class="quote-label">Product Interest <em>*</em></span>' +
+              '<select name="product" required>' +
+                '<option value="" disabled selected>Select product</option>' +
+                '<option value="pvc-compound">PVC Compound</option>' +
+                '<option value="rp-compound">RP Compound</option>' +
+                '<option value="masterbatch">PVC Masterbatches</option>' +
+                '<option value="special-compound">Special Compounds</option>' +
+                '<option value="not-sure">Not sure / Need recommendation</option>' +
+              '</select>' +
+            '</label>' +
+            '<label class="quote-field">' +
+              '<span class="quote-label">Application / Industry <em>*</em></span>' +
+              '<select name="industry" required>' +
+                '<option value="" disabled selected>Select application</option>' +
+                '<option value="wire-cable">Wire &amp; Cable</option>' +
+                '<option value="pipes-fittings">Pipes &amp; Fittings</option>' +
+                '<option value="footwear">Footwear</option>' +
+                '<option value="profiles-building">Profiles &amp; Building</option>' +
+                '<option value="roofing">Roofing</option>' +
+                '<option value="molding">Soft PVC Molding</option>' +
+                '<option value="medical">Medical</option>' +
+                '<option value="agriculture">Agriculture</option>' +
+                '<option value="other">Other</option>' +
+              '</select>' +
+            '</label>' +
+          '</div>' +
+          '<div class="quote-form-row">' +
+            '<label class="quote-field">' +
+              '<span class="quote-label">City / Location</span>' +
+              '<input type="text" name="city" placeholder="City, State" autocomplete="address-level2" />' +
+            '</label>' +
+            '<label class="quote-field">' +
+              '<span class="quote-label">Estimated Quantity</span>' +
+              '<input type="text" name="quantity" placeholder="e.g. 5 MT / month" />' +
+            '</label>' +
+          '</div>' +
+          '<label class="quote-field quote-field--full">' +
+            '<span class="quote-label">Your Requirement <em>*</em></span>' +
+            '<textarea name="requirement" rows="4" placeholder="Tell us about grades, specs, timeline, or any special needs..." required></textarea>' +
+          '</label>' +
+          '<button type="submit" class="quote-submit-btn">' +
+            'Submit Quote Request' +
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="16" height="16" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>' +
+          '</button>' +
+          '<p class="quote-form-note">We typically respond within 24 business hours.</p>' +
+          '<input type="text" name="website" class="quote-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />' +
+          '<p class="quote-form-status" id="quote-form-status" role="status" aria-live="polite" hidden></p>' +
+        '</form>' +
+      '</div>' +
+    '</div>';
+
   var headerMount = document.getElementById('site-header');
   var footerMount = document.getElementById('site-footer');
 
   if (headerMount) headerMount.outerHTML = headerHTML;
   if (footerMount) footerMount.outerHTML = footerHTML;
+
+  if (!document.getElementById('quote-modal')) {
+    document.body.insertAdjacentHTML('beforeend', quoteModalHTML);
+  }
 })();
