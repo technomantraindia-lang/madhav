@@ -1,0 +1,761 @@
+/* ==========================================================================
+   Madhav Polymers — Application Details Page
+   ========================================================================== */
+
+:root {
+  --ad-side-pad: clamp(24px, 4.5vw, 48px);
+  --ad-purple: #3D1F8C;
+  --ad-soft: #7B5CE8;
+  --ad-lavender: #f3efff;
+  --ad-text: #1a1247;
+  --ad-muted: #5a5a6a;
+  --ad-border: #e8eaf2;
+}
+
+.ad-page {
+  background: #fff;
+  color: var(--text);
+  font-family: var(--font);
+}
+
+.ad-label {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--orange);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.ad-heading {
+  font-size: clamp(24px, 2.6vw, 32px);
+  font-weight: 800;
+  color: var(--ad-purple);
+  line-height: 1.2;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+
+.ad-copy {
+  font-size: 15px;
+  color: var(--ad-muted);
+  line-height: 1.7;
+  max-width: 620px;
+  margin-bottom: 28px;
+}
+
+/* ==========================================
+   HERO — matches design mockup exactly
+   ========================================== */
+.ad-hero {
+  position: relative;
+  margin-top: var(--header-height);
+  background-color: #ffffff;
+  background-image: url('appication deatils banner section.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  min-height: clamp(520px, 52vw, 640px);
+}
+
+.ad-hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: clamp(40px, 5.5vw, 72px) var(--ad-side-pad);
+}
+
+.ad-hero-content {
+  width: min(100%, 780px);
+  position: relative;
+  z-index: 2;
+}
+
+.ad-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #9ca3af;
+  margin-bottom: 16px;
+}
+
+.ad-breadcrumb a {
+  color: #9ca3af;
+  transition: color 0.2s;
+}
+
+.ad-breadcrumb a:hover,
+.ad-breadcrumb .ad-bc-link {
+  color: #7B5CE8;
+}
+
+.ad-breadcrumb .ad-bc-link:hover {
+  color: var(--ad-purple);
+}
+
+.ad-bc-sep { color: #c4c4d0; }
+.ad-bc-active { color: #6b7280; font-weight: 500; }
+
+.ad-hero-pill {
+  display: inline-block;
+  background: #efe8ff;
+  color: #6b4fd6;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.ad-hero-title {
+  font-size: clamp(34px, 4.2vw, 50px);
+  font-weight: 800;
+  color: #1f1f2e;
+  line-height: 1.12;
+  margin-bottom: 16px;
+  letter-spacing: -0.03em;
+}
+
+.ad-hero-accent { color: #7B5CE8; }
+
+.ad-hero-desc {
+  font-size: clamp(14px, 1.35vw, 15.5px);
+  color: #4b5563;
+  line-height: 1.7;
+  max-width: 520px;
+  margin-bottom: 18px;
+}
+
+.ad-hero-rule {
+  width: 48px;
+  height: 3px;
+  border-radius: 3px;
+  background: #7B5CE8;
+  margin-bottom: 24px;
+}
+
+.ad-hero-feats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  max-width: 760px;
+}
+
+.ad-hero-feat {
+  background: #ffffff;
+  border: 1px solid #eef0f6;
+  border-radius: 16px;
+  padding: 18px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 88px;
+  box-shadow: 0 8px 24px rgba(45, 30, 90, 0.07);
+}
+
+.ad-hero-feat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #f3e8ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ad-hero-feat-icon img {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+.ad-hero-feat-text {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1247;
+  line-height: 1.35;
+  text-align: left;
+  word-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.ad-hero-feat-text span {
+  display: block;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   APPLICATION CARDS CAROUSEL
+   ========================================== */
+.ad-apps {
+  background: #f3f1f8;
+  padding: 0 clamp(12px, 2vw, 24px);
+  margin-top: -28px;
+  position: relative;
+  z-index: 5;
+}
+
+.ad-apps-shell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 36px rgba(45, 30, 90, 0.1);
+  padding: 16px 12px;
+  border: 1px solid #eef0f6;
+}
+
+.ad-apps-arrow {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  color: #3d1f8c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  opacity: 0.8;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.ad-apps-arrow:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.ad-apps-arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+.ad-apps-track {
+  display: flex;
+  align-items: stretch;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  flex: 1;
+  padding: 4px 2px;
+}
+
+.ad-apps-track::-webkit-scrollbar { display: none; }
+
+.ad-app-card {
+  flex: 0 0 min(340px, 82vw);
+  display: grid;
+  grid-template-columns: 118px 1fr;
+  gap: 14px;
+  align-items: stretch;
+  min-height: 148px;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1.5px solid #e8eaf2;
+  background: #ffffff;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.ad-app-card:hover {
+  border-color: #d5cbf5;
+  box-shadow: 0 8px 22px rgba(61, 31, 140, 0.08);
+}
+
+.ad-app-card.is-active {
+  background: #f3ecff;
+  border-color: #cbb8f5;
+}
+
+.ad-app-card-img {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ad-app-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 118px;
+}
+
+.ad-app-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding-top: 2px;
+}
+
+.ad-app-card-title {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 800;
+  color: #2a1760;
+  line-height: 1.25;
+  word-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ad-app-card-title span {
+  display: block;
+  white-space: nowrap;
+}
+
+.ad-app-card-desc {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #6b6b7a;
+  word-spacing: 1.5px;
+  flex: 1;
+}
+
+.ad-app-card-btn {
+  width: 34px;
+  height: 34px;
+  margin-top: 12px;
+  border-radius: 50%;
+  border: 1.5px solid #d9d2f0;
+  background: #fff;
+  color: #3d1f8c;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.ad-app-card-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+.ad-app-card:hover .ad-app-card-btn,
+.ad-app-card.is-active .ad-app-card-btn {
+  background: #3d1f8c;
+  border-color: #3d1f8c;
+  color: #fff;
+}
+
+/* ==========================================
+   MAIN TWO-COLUMN
+   ========================================== */
+.ad-main {
+  background: #f7f6fb;
+  padding: clamp(48px, 6vw, 72px) var(--ad-side-pad);
+  padding-top: clamp(36px, 4vw, 48px);
+}
+
+.ad-main-inner {
+  display: grid;
+  grid-template-columns: 1.45fr 0.75fr;
+  gap: 28px;
+  align-items: start;
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+.ad-block {
+  background: #fff;
+  border: 1px solid var(--ad-border);
+  border-radius: 22px;
+  padding: clamp(28px, 3.2vw, 40px);
+  margin-bottom: 24px;
+  box-shadow: 0 8px 28px rgba(45, 30, 90, 0.06);
+}
+
+.ad-block:last-child { margin-bottom: 0; }
+
+.ad-block--why .ad-accent-bar {
+  display: block;
+  width: 42px;
+  height: 4px;
+  border-radius: 4px;
+  background: #3d1f8c;
+  margin-bottom: 16px;
+}
+
+.ad-block--why .ad-heading {
+  font-size: clamp(26px, 2.8vw, 34px);
+  color: #1a1247;
+  word-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.ad-block--why .ad-copy {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #5a5a6a;
+  word-spacing: 2.5px;
+  max-width: 640px;
+  margin-bottom: 20px;
+}
+
+.ad-radar-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 0 4px;
+  overflow: visible;
+}
+
+.ad-radar {
+  width: min(100%, 620px);
+  height: auto;
+  overflow: visible;
+}
+
+.ad-radar-label {
+  font-size: 14px;
+  font-weight: 600;
+  fill: #4a4460;
+  font-family: Inter, system-ui, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.ad-examples {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.ad-example {
+  background: #fff;
+  border: 1px solid var(--ad-border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ad-example:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(61, 31, 140, 0.1);
+}
+
+.ad-example-img {
+  aspect-ratio: 4 / 3;
+  background: #0b0b0f;
+  overflow: hidden;
+}
+
+.ad-example-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ad-example h3 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ad-text);
+  padding: 12px 14px 14px;
+  line-height: 1.35;
+}
+
+.ad-main-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: calc(var(--header-height) + 16px);
+}
+
+.ad-side-card {
+  background: #fff;
+  border: 1px solid var(--ad-border);
+  border-radius: 22px;
+  padding: 28px 26px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+.ad-side-card .ad-label {
+  font-size: 13px;
+  letter-spacing: 2.4px;
+  word-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.ad-side-card .ad-heading {
+  font-size: clamp(28px, 2.8vw, 36px);
+  word-spacing: 4px;
+  margin-bottom: 18px;
+}
+
+.ad-benefits {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.ad-benefits li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.ad-benefit-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--ad-lavender);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ad-benefit-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.ad-benefits h3 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ad-text);
+  margin-bottom: 6px;
+  word-spacing: 3px;
+  line-height: 1.35;
+}
+
+.ad-benefits p {
+  font-size: 15px;
+  color: var(--ad-muted);
+  line-height: 1.65;
+  word-spacing: 2.5px;
+}
+
+.ad-specs {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.ad-specs li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--ad-border);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ad-text);
+  word-spacing: 3px;
+  line-height: 1.45;
+}
+
+.ad-specs li:last-child { border-bottom: none; }
+
+.ad-specs img {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   CTA
+   ========================================== */
+.ad-cta {
+  background: var(--ad-lavender);
+  padding: 28px var(--ad-side-pad) 72px;
+}
+
+.ad-cta-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  border: 1px solid var(--ad-border);
+  border-radius: 18px;
+  padding: 24px 28px;
+  box-shadow: 0 8px 28px rgba(61, 31, 140, 0.06);
+}
+
+.ad-cta-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: var(--ad-lavender);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ad-cta-icon img {
+  width: 34px;
+  height: 34px;
+}
+
+.ad-cta-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.ad-cta-copy h2 {
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 800;
+  color: var(--ad-text);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.ad-cta-copy p {
+  font-size: 14px;
+  color: var(--ad-muted);
+  line-height: 1.5;
+}
+
+.ad-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 22px;
+  border-radius: 12px;
+  background: var(--ad-purple);
+  color: #fff;
+  font-size: 14.5px;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s, gap 0.2s;
+}
+
+.ad-cta-btn:hover {
+  background: #5a35c4;
+  gap: 12px;
+}
+
+.ad-cta-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 1100px) {
+  .ad-main-inner { grid-template-columns: 1fr; }
+  .ad-main-right { position: static; }
+  .ad-hero-feats { grid-template-columns: repeat(2, 1fr); max-width: 420px; }
+}
+
+@media (max-width: 900px) {
+  .ad-hero {
+    background-position: center top;
+    background-size: contain;
+    min-height: clamp(600px, 125vw, 760px);
+    align-items: flex-end;
+  }
+
+  .ad-hero-inner {
+    text-align: left;
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: clamp(24px, 5vw, 36px);
+  }
+
+  .ad-hero-content {
+    width: min(100%, 780px);
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 16px;
+    padding: 22px 18px;
+    box-shadow: 0 8px 24px rgba(61, 31, 140, 0.06);
+  }
+
+  .ad-hero-feats {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: none;
+  }
+
+  .ad-examples { grid-template-columns: repeat(2, 1fr); }
+
+  .ad-apps {
+    margin-top: -16px;
+    padding-bottom: 8px;
+  }
+
+  .ad-apps-shell {
+    border-radius: 14px;
+    padding: 12px 6px;
+  }
+
+  .ad-app-card {
+    flex-basis: min(300px, 86vw);
+    grid-template-columns: 100px 1fr;
+    min-height: 136px;
+  }
+
+  .ad-app-card-title {
+    font-size: 15px;
+  }
+
+  .ad-app-card-desc {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ad-hero {
+    min-height: clamp(560px, 150vw, 720px);
+  }
+
+  .ad-cta-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ad-cta-btn { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 520px) {
+  .ad-hero-feats,
+  .ad-examples { grid-template-columns: 1fr; }
+
+  .ad-hero-feat { min-height: auto; }
+
+  .ad-apps-shell {
+    gap: 0;
+  }
+
+  .ad-app-card {
+    flex-basis: min(280px, 88vw);
+    padding: 12px;
+  }
+}
