@@ -12,12 +12,12 @@
       image: 'appication deatils banner section.png',
       why: 'Engineered to meet the stringent demands of electrical applications, ensuring safety, performance, and durability.',
       examples: [
-        { img: 'Untitled design/1.png', label: 'Power Cables' },
-        { img: 'Wide Range of Applications 1.png', label: 'House Wiring' },
-        { img: 'Untitled design/6.png', label: 'Control Cables' },
-        { img: 'Wide Range of Applications 2.png', label: 'Switches & Sockets' },
-        { img: 'Untitled design/2.png', label: 'Conduits & Trunking' },
-        { img: 'Wide Range of Applications 6.png', label: 'Cable Accessories' }
+        { img: 'Wire & Cables.png', label: 'Power Cables' },
+        { img: 'Untitled design/1.png', label: 'House Wiring' },
+        { img: 'Wide Range of Applications 2.png', label: 'Control Cables' },
+        { img: 'plugs-and-cords-transparent.png', label: 'Switches & Sockets' },
+        { img: 'Wire & Cables.png', label: 'Conduits & Trunking' },
+        { img: 'plugs-and-cords.png', label: 'Cable Accessories' }
       ]
     },
     'pipes-fittings': {
@@ -61,11 +61,11 @@
       why: 'Designed for comfort, flex fatigue resistance, and excellent flow for injection and molding footwear applications.',
       examples: [
         { img: 'Untitled design/4.png', label: 'Shoe Soles' },
-        { img: 'Wide Range of Applications 4.png', label: 'Sandals' },
-        { img: 'Untitled design/6.png', label: 'Footwear Straps' },
-        { img: 'Wide Range of Applications 6.png', label: 'Heels & Tips' },
-        { img: 'Untitled design/1.png', label: 'Insoles' },
-        { img: 'Wide Range of Applications 1.png', label: 'Accessories' }
+        { img: 'Footwear.png', label: 'Sandals' },
+        { img: 'Footwear.png', label: 'Footwear Straps' },
+        { img: 'Wide Range of Applications 4.png', label: 'Heels & Tips' },
+        { img: 'Untitled design/4.png', label: 'Insoles' },
+        { img: 'Wide Range of Applications 4.png', label: 'Accessories' }
       ]
     },
     roofing: {
