@@ -173,7 +173,7 @@
 
     var relatedCards = document.querySelectorAll('.pd-related-card');
     if (relatedCards[0]) {
-      relatedCards[0].querySelector('img').src = 'white_pvc_pellets_card_cut_1024x1536.png';
+      relatedCards[0].querySelector('img').src = 'PVC Compound.jpg';
       relatedCards[0].querySelector('img').alt = 'PVC Compound';
       relatedCards[0].querySelector('h4').textContent = 'PVC Compound';
       relatedCards[0].querySelector('a').href = 'product-details.html';
@@ -188,7 +188,214 @@
     if (brochureLinks[0]) brochureLinks[0].lastChild.textContent = ' RP Compound Product Brochure (PDF)';
   }
 
+  function applyMasterbatchPage() {
+    if (productKey !== 'pvc-masterbatches') return;
+
+    document.body.classList.add('pd-masterbatch-page');
+    document.title = 'PVC Masterbatches – Madhav Polymers | Vibrant, Consistent Colour';
+
+    var description = document.querySelector('meta[name="description"]');
+    if (description) {
+      description.content = 'Explore high-quality PVC masterbatches with vibrant colour, excellent dispersion, UV stability, and consistent processing performance.';
+    }
+
+    var breadcrumbCurrent = document.querySelector('.pd-breadcrumb span:last-child');
+    var grade = document.querySelector('.pd-grade-badge');
+    var heroTitle = document.querySelector('.pd-hero-title');
+    var heroDesc = document.querySelector('.pd-hero-desc');
+    var heroFeatures = document.querySelector('.pd-hero-features');
+    var heroBackground = document.querySelector('.pd-hero-bg');
+    var benefits = document.querySelector('.pd-benefits-box ul');
+    var forms = document.querySelector('.pd-forms-box');
+
+    if (heroBackground) {
+      heroBackground.src = 'PVC masterbatches banner.png';
+      heroBackground.alt = 'Bowls of vibrant PVC masterbatch granules';
+    }
+    if (breadcrumbCurrent) breadcrumbCurrent.textContent = 'PVC Masterbatches';
+    if (grade) grade.textContent = 'PREMIUM GRADE';
+    if (heroTitle) heroTitle.textContent = 'PVC Masterbatches';
+    if (heroDesc) {
+      heroDesc.textContent = 'High-quality PVC masterbatches offering vibrant colors, excellent dispersion, UV stability, and consistent performance for a wide range of extrusion and molding applications.';
+    }
+    if (heroFeatures) {
+      heroFeatures.innerHTML =
+        '<div class="pd-hero-feat"><div class="pd-feat-icon"><img src="madhav_product_hero_icons_svg/consistent_quality.svg" alt="" /></div><span>Vibrant &amp;<br>Consistent Color</span></div>' +
+        '<div class="pd-hero-feat"><div class="pd-feat-icon"><img src="madhav_product_hero_icons_svg/advanced_technology.svg" alt="" /></div><span>Excellent<br>Dispersion</span></div>' +
+        '<div class="pd-hero-feat"><div class="pd-feat-icon"><img src="madhav_quality_icons_svg_pack/consistent_quality_shield.svg" alt="" /></div><span>UV Weather<br>Resistant</span></div>' +
+        '<div class="pd-hero-feat"><div class="pd-feat-icon"><img src="madhav_product_hero_icons_svg/tailored_for_every_need.svg" alt="" /></div><span>Wide Range of<br>Applications</span></div>';
+    }
+    if (benefits) {
+      benefits.innerHTML = [
+        'Brilliant & Consistent Colors',
+        'Excellent Heat Stability',
+        'Superior Dispersion',
+        'UV & Weather Resistance',
+        'Cost Effective Solutions'
+      ].map(function (item) {
+        return '<li>' + checkIcon() + item + '</li>';
+      }).join('');
+    }
+    if (forms) forms.innerHTML = '<strong>Available Forms:</strong> Granules';
+
+    var overviewLabel = document.querySelector('#tab-overview .section-label');
+    var overviewTitle = document.querySelector('#tab-overview h2');
+    var overviewDesc = document.querySelector('#tab-overview .pd-overview-desc');
+    var overviewChecks = document.querySelector('#tab-overview .pd-check-list');
+    var mainImage = document.querySelector('.pd-overview-main-img img');
+    var gallery = document.querySelector('.pd-thumb-gallery');
+
+    if (overviewLabel) overviewLabel.textContent = 'ABOUT PVC MASTERBATCHES';
+    if (overviewTitle) overviewTitle.innerHTML = 'Color That Enhances.<br><span class="purple">Quality That Lasts.</span>';
+    if (overviewDesc) {
+      overviewDesc.textContent = 'Our PVC Masterbatches are concentrated mixtures of pigments and additives encapsulated in PVC resin, designed to impart excellent color, performance, and durability to your final products.';
+    }
+    if (overviewChecks) {
+      overviewChecks.innerHTML = [
+        'Brilliant Color Strength',
+        'Excellent Dispersion',
+        'High & Light Stability',
+        'UV & Weather Resistance',
+        'Non-Toxic & RoHS Compliant'
+      ].map(function (item) {
+        return '<li>' + checkIcon() + item + '</li>';
+      }).join('');
+    }
+    if (mainImage) {
+      mainImage.src = 'ABOUT PVC MASTERBATCHES.jpg';
+      mainImage.alt = 'PVC masterbatches in vibrant colours';
+    }
+    if (gallery) {
+      gallery.innerHTML =
+        '<button class="pd-thumb active" aria-label="View coloured masterbatches"><img src="ABOUT PVC MASTERBATCHES.jpg" alt="" /></button>' +
+        '<button class="pd-thumb" aria-label="View green masterbatches"><img src="ABOUT PVC MASTERBATCHES 2.jpg" alt="" /></button>' +
+        '<button class="pd-thumb" aria-label="View mixed colour masterbatches"><img src="ABOUT PVC MASTERBATCHES 3.jpg" alt="" /></button>' +
+        '<button class="pd-thumb" aria-label="View blue speciality masterbatches"><img src="ABOUT PVC MASTERBATCHES 4.jpg" alt="" /></button>';
+    }
+
+    var specIntro = document.querySelector('#tab-specifications .pd-overview-desc');
+    if (specIntro) {
+      specIntro.textContent = 'Our PVC masterbatches are available in standard, special-effect, additive, and custom colour grades for consistent results across demanding processing applications.';
+    }
+    var specCards = document.querySelector('#tab-specifications .pd-spec-grid');
+    if (specCards) {
+      specCards.innerHTML =
+        '<div class="pd-spec-card"><strong>Colour Range</strong><span>Standard, Custom &amp; Special Effects</span></div>' +
+        '<div class="pd-spec-card"><strong>Pigment Content</strong><span>10 – 40%</span></div>' +
+        '<div class="pd-spec-card"><strong>Processing</strong><span>Extrusion &amp; Injection Molding</span></div>' +
+        '<div class="pd-spec-card"><strong>Light Fastness</strong><span>Rating 7 – 8</span></div>' +
+        '<div class="pd-spec-card"><strong>Packaging</strong><span>25 kg Bags, Custom Bulk</span></div>' +
+        '<div class="pd-spec-card"><strong>Available Form</strong><span>Granules</span></div>';
+    }
+
+    var variants = document.getElementById('variant-track');
+    if (variants) {
+      variants.innerHTML =
+        '<article class="pd-variant-card active"><h3>Standard Color Masterbatches</h3><p>Wide range of standard colors with excellent performance.</p><a href="#" class="pd-learn-more">Learn More <span>&#8594;</span></a></article>' +
+        '<article class="pd-variant-card"><h3>Special Effect Masterbatches</h3><p>Metallic, fluorescent, and special effects for premium finishes.</p><a href="#" class="pd-learn-more">Learn More <span>&#8594;</span></a></article>' +
+        '<article class="pd-variant-card"><h3>Additive Masterbatches</h3><p>Functional masterbatches for enhanced properties and performance.</p><a href="#" class="pd-learn-more">Learn More <span>&#8594;</span></a></article>' +
+        '<article class="pd-variant-card"><h3>Custom Color Masterbatches</h3><p>Tailor-made colors to match your unique requirements.</p><a href="#" class="pd-learn-more">Learn More <span>&#8594;</span></a></article>';
+    }
+
+    var appItems = [
+      ['madhav_applications_process_icons_svg_pack/pipes_fittings.svg', 'Pipes & Fittings'],
+      ['madhav_applications_process_icons_svg_pack/wire_cable.svg', 'Wire & Cable'],
+      ['madhav_applications_process_icons_svg_pack/profile_building.svg', 'Profiles & Building'],
+      ['madhav_applications_process_icons_svg_pack/medical.svg', 'Sheet & Film'],
+      ['madhav_applications_process_icons_svg_pack/roofing.svg', 'Flooring'],
+      ['madhav_applications_process_icons_svg_pack/molding_others.svg', 'Injection Molding'],
+      ['madhav_applications_process_icons_svg_pack/footwear.svg', 'Footwear'],
+      ['madhav_applications_process_icons_svg_pack/consistent_performance.svg', 'Blow Molding']
+    ];
+    var inlineApps = document.querySelector('.pd-app-grid-inline');
+    var appGrid = document.querySelector('.pd-triple-section .pd-app-grid');
+    if (inlineApps) {
+      inlineApps.innerHTML = appItems.slice(0, 6).map(function (item) {
+        return '<div class="pd-app-item"><img src="' + item[0] + '" alt="" width="40" height="40" /><span>' + item[1] + '</span></div>';
+      }).join('');
+    }
+    if (appGrid) {
+      appGrid.innerHTML = appItems.map(function (item) {
+        return '<div class="pd-app-pill"><div class="pd-app-pill-icon"><img src="' + item[0] + '" alt="" /></div><span>' + item[1] + '</span></div>';
+      }).join('');
+    }
+
+    var processFlow = document.querySelector('.pd-process-flow');
+    if (processFlow) {
+      var processItems = [
+        ['madhav_applications_process_icons_svg_pack/carefully_sourced_raw_materials.svg', 'Pigment Selection'],
+        ['madhav_applications_process_icons_svg_pack/advanced_compounding.svg', 'Batch Compatibility'],
+        ['madhav_applications_process_icons_svg_pack/precision_formulation.svg', 'Precise Dispersion'],
+        ['madhav_applications_process_icons_svg_pack/rigorous_quality_checks.svg', 'Quality Testing'],
+        ['madhav_applications_process_icons_svg_pack/consistent_performance.svg', 'Consistent Performance']
+      ];
+      processFlow.innerHTML = processItems.map(function (item, index) {
+        var step = '<div class="pd-process-step"><div class="pd-process-icon"><img src="' + item[0] + '" alt="" /></div><span>' + item[1] + '</span></div>';
+        var arrow = index < processItems.length - 1
+          ? '<div class="pd-process-arrow" aria-hidden="true"><img src="madhav_applications_process_icons_svg_pack/process_arrow.svg" alt="" /></div>'
+          : '';
+        return step + arrow;
+      }).join('');
+    }
+
+    var performance = document.querySelector('.pd-performance-bars');
+    if (performance) {
+      performance.innerHTML = [
+        ['Color Strength', 95],
+        ['Heat Stability', 93],
+        ['Light Fastness', 90],
+        ['Weather Resistance', 92],
+        ['Dispersion Quality', 95]
+      ].map(function (item, index) {
+        var gradientClass = index === 3 || index === 4 ? ' pd-perf-fill--gradient' : '';
+        return '<div class="pd-perf-item"><div class="pd-perf-label"><span>' + item[0] + '</span><span>' + item[1] + '%</span></div><div class="pd-perf-bar"><div class="pd-perf-fill' + gradientClass + '" style="width:' + item[1] + '%"></div></div></div>';
+      }).join('');
+    }
+
+    var technicalRows = [
+      ['Pigment Content', 'ASTM D5630', '%', '10 – 40'],
+      ['Heat Stability', 'Internal Method', '°C', '180 – 200'],
+      ['Light Fastness', 'ISO 105-B02', 'Rating', '7 – 8'],
+      ['Weather Resistance', 'ASTM G154', 'Hours', '500+'],
+      ['Melt Flow Index', 'ASTM D1238', 'g/10 min', '2 – 5'],
+      ['Density', 'ASTM D792', 'g/cm³', '1.20 – 1.80']
+    ];
+    document.querySelectorAll('.pd-data-table tbody').forEach(function (tbody) {
+      tbody.innerHTML = technicalRows.map(function (row) {
+        return '<tr><td>' + row[0] + '</td><td>' + row[1] + '</td><td>' + row[2] + '</td><td>' + row[3] + '</td></tr>';
+      }).join('');
+    });
+
+    var relatedData = [
+      ['PVC Compound.jpg', 'PVC Compound', 'product-details.html'],
+      ['Untitled design-3.png', 'RP Compound', 'rp-compound-details.html'],
+      ['Pipes & Fittings Compounds.jpg', 'Pipes & Fittings Compounds', 'product-details.html'],
+      ['Special Compounds.jpg', 'Special Compounds', 'products.html?cat=special-compound']
+    ];
+    document.querySelectorAll('.pd-related-card').forEach(function (card, index) {
+      if (!relatedData[index]) return;
+      card.querySelector('img').src = relatedData[index][0];
+      card.querySelector('img').alt = relatedData[index][1];
+      card.querySelector('h4').textContent = relatedData[index][1];
+      card.querySelector('a').href = relatedData[index][2];
+    });
+
+    var ctaImage = document.querySelector('.pd-cta-img');
+    var ctaTitle = document.querySelector('.pd-cta-text h2');
+    var ctaCopy = document.querySelector('.pd-cta-text p');
+    if (ctaImage) {
+      ctaImage.src = 'Untitled design.png';
+      ctaImage.alt = 'Colour PVC masterbatches';
+    }
+    if (ctaTitle) ctaTitle.textContent = 'Need a Custom PVC Masterbatch?';
+    if (ctaCopy) ctaCopy.textContent = 'Our experts will help you develop the right color and performance solution for your application.';
+
+    var brochureLinks = document.querySelectorAll('.pd-download-item');
+    if (brochureLinks[0]) brochureLinks[0].lastChild.textContent = ' PVC Masterbatches Product Brochure (PDF)';
+  }
+
   applyRpCompoundPage();
+  applyMasterbatchPage();
 
   /* ---- Tabs ---- */
   var tabBtns = document.querySelectorAll('.pd-tab-btn');
@@ -282,6 +489,62 @@
       e.preventDefault();
       alert('Thank you! Your inquiry has been received. Our team will contact you shortly.');
       form.reset();
+    });
+  }
+
+  /* ---- Scroll reveal motion system ---- */
+  document.body.classList.add('pd-motion-ready');
+
+  var revealGroups = [
+    { selector: '.pd-stat-item', step: 70 },
+    { selector: '.pd-tabs-wrap', step: 0 },
+    { selector: '.pd-variants-section .section-label', step: 0 },
+    { selector: '.pd-variant-card', step: 75 },
+    { selector: '.pd-triple-col', step: 110 },
+    { selector: '.pd-info-grid > .pd-info-col', step: 110 },
+    { selector: '.pd-related-section .section-label', step: 0 },
+    { selector: '.pd-related-card', step: 75 },
+    { selector: '.pd-cta-wrap', step: 0 }
+  ];
+
+  var revealTargets = [];
+  revealGroups.forEach(function (group) {
+    document.querySelectorAll(group.selector).forEach(function (element, index) {
+      element.classList.add('pd-reveal');
+      element.style.setProperty('--pd-reveal-delay', (index * group.step) + 'ms');
+
+      if (group.selector === '.pd-info-grid > .pd-info-col' && index === 0) {
+        element.classList.add('pd-reveal-left');
+      }
+      if (group.selector === '.pd-info-grid > .pd-info-col' && index === 2) {
+        element.classList.add('pd-reveal-right');
+      }
+
+      revealTargets.push(element);
+    });
+  });
+
+  var reduceMotion = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealTargets.forEach(function (target) {
+      target.classList.add('is-visible');
+    });
+  } else {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -7% 0px'
+    });
+
+    revealTargets.forEach(function (target) {
+      revealObserver.observe(target);
     });
   }
 
