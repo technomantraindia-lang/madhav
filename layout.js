@@ -26,7 +26,7 @@
               '<a href="products.html" class="' + navClass('products').trim() + '" id="nav-products">Products <span class="arrow">&#9662;</span></a>' +
               '<ul class="dropdown">' +
                 '<li><a href="product-details.html" id="nav-pvc">PVC Compound</a></li>' +
-                '<li><a href="products.html?cat=rp-compound" id="nav-rp">RP Compound</a></li>' +
+                '<li><a href="rp-compound-details.html" id="nav-rp">RP Compound</a></li>' +
                 '<li><a href="products.html?cat=masterbatch" id="nav-mb">PVC Masterbatches</a></li>' +
                 '<li><a href="products.html?cat=special-compound" id="nav-sp">Special Compounds</a></li>' +
               '</ul>' +
@@ -93,7 +93,7 @@
           '<h4>PRODUCTS</h4>' +
           '<ul>' +
             '<li><a href="product-details.html" id="foot-pvc">PVC Compound</a></li>' +
-            '<li><a href="products.html?cat=rp-compound" id="foot-rp">RP Compound</a></li>' +
+            '<li><a href="rp-compound-details.html" id="foot-rp">RP Compound</a></li>' +
             '<li><a href="products.html?cat=masterbatch" id="foot-mb">PVC Masterbatches</a></li>' +
             '<li><a href="products.html?cat=special-compound" id="foot-sp">Special Compounds</a></li>' +
           '</ul>' +
