@@ -740,17 +740,17 @@ body.pd-rp-page .pd-overview-main-img img {
 .pd-app-pill {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 6px 14px 6px 6px;
+  gap: 12px;
+  padding: 7px 16px 7px 7px;
   background: #f3f0fa;
   border-radius: 50px;
-  min-height: 46px;
+  min-height: 54px;
   transition: background 0.2s;
 }
 .pd-app-pill:hover { background: #ebe6f8; }
 .pd-app-pill-icon {
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: #fff;
   display: flex;
@@ -761,15 +761,15 @@ body.pd-rp-page .pd-overview-main-img img {
   box-shadow: 0 1px 4px rgba(61, 31, 140, 0.06);
 }
 .pd-app-pill-icon img {
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
 }
 .pd-app-pill span {
-  font-size: 11px;
-  font-weight: 600;
-  color: #3a3a48;
-  line-height: 1.25;
+  font-size: 13px;
+  font-weight: 700;
+  color: #292936;
+  line-height: 1.35;
 }
 .pd-explore-link {
   font-size: 13px;
@@ -805,15 +805,15 @@ body.pd-rp-page .pd-overview-main-img img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   text-align: center;
   flex: 1 1 0;
   min-width: 0;
   max-width: none;
 }
 .pd-process-icon {
-  width: 76px;
-  height: 76px;
+  width: 88px;
+  height: 88px;
   background: #f7f4fd;
   border-radius: 50%;
   border: 2px solid #c4b0f5;
@@ -830,15 +830,15 @@ body.pd-rp-page .pd-overview-main-img img {
   border-color: var(--purple);
 }
 .pd-process-icon img {
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
 }
 .pd-process-step span {
-  font-size: 12.5px;
-  font-weight: 600;
-  color: #2c2c35;
-  line-height: 1.45;
+  font-size: 14px;
+  font-weight: 700;
+  color: #20202a;
+  line-height: 1.5;
   display: block;
   width: 100%;
   padding: 0 4px;
@@ -851,7 +851,7 @@ body.pd-rp-page .pd-overview-main-img img {
   justify-content: center;
   flex: 0 0 24px;
   flex-shrink: 0;
-  margin-top: 26px;
+  margin-top: 32px;
   opacity: 0.65;
 }
 .pd-process-arrow img {
@@ -1393,11 +1393,11 @@ body.pd-rp-page .pd-overview-main-img img {
   }
   .pd-process-flow {
     flex-wrap: nowrap;
-    min-width: 660px;
+    min-width: 760px;
     justify-content: space-between;
   }
   .pd-process-step { flex: 1 1 0; }
-  .pd-process-arrow { margin-top: 26px; }
+  .pd-process-arrow { margin-top: 32px; }
   .pd-cta-wrap {
     flex-direction: column;
     text-align: center;
