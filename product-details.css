@@ -139,6 +139,17 @@ body.pd-rp-page .pd-hero-feat {
   flex: 1 1 125px;
 }
 
+body.pd-rp-page .pd-feat-icon {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: #ff7a1a;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+body.pd-rp-page .pd-feat-icon img {
+  filter: brightness(0) invert(1);
+  opacity: 1;
+}
+
 body.pd-rp-page .pd-overview-main-img img {
   object-fit: contain;
   background: #f6f6f6;
