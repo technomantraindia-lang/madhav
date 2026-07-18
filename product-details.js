@@ -28,9 +28,14 @@
     var heroTitle = document.querySelector('.pd-hero-title');
     var heroDesc = document.querySelector('.pd-hero-desc');
     var heroFeatures = document.querySelector('.pd-hero-features');
+    var heroBackground = document.querySelector('.pd-hero-bg');
     var benefits = document.querySelector('.pd-benefits-box ul');
     var forms = document.querySelector('.pd-forms-box');
 
+    if (heroBackground) {
+      heroBackground.src = 'RP compund banner section.png';
+      heroBackground.alt = 'RP compound pellets, pipes, and fittings';
+    }
     if (breadcrumbCurrent) breadcrumbCurrent.textContent = 'RP Compound';
     if (grade) grade.textContent = 'PREMIUM GRADE';
     if (heroTitle) heroTitle.textContent = 'RP Compound';
