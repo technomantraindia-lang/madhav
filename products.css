@@ -468,3 +468,9 @@
   .wc-item:not(:last-child)::after { display: none; }
   .prod-listing-section { padding: 20px 16px 44px; }
 }
+
+/* Helper to align portrait/bottom-weighted images in product cards */
+.prod-card-img img[src*="Untitled design"],
+.prod-card-img img[src*="white_pvc_pellets"] {
+  object-position: bottom;
+}

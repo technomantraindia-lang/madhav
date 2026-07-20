@@ -1918,3 +1918,9 @@ body.pd-special-page .pd-process-step span {
   }
   .pd-tab-btn { padding: 14px 16px; font-size: 13px; }
 }
+
+/* Helper to align portrait/bottom-weighted images in related product cards */
+.pd-related-img img[src*="Untitled design"],
+.pd-related-img img[src*="white_pvc_pellets"] {
+  object-position: bottom;
+}
