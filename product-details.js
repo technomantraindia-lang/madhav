@@ -468,15 +468,16 @@
       }).join('');
     }
     if (mainImage) {
-      mainImage.src = 'Special Compounds.jpg';
+      mainImage.src = 'ABOUT SPECIAL COMPOUNDS 1.png';
       mainImage.alt = 'Special compound formulations and engineered polymer solutions';
     }
     if (gallery) {
       gallery.innerHTML =
-        '<button class="pd-thumb active" aria-label="View special compound formulations"><img src="Special Compounds.jpg" alt="" /></button>' +
-        '<button class="pd-thumb" aria-label="View custom compound granules"><img src="Untitled design-1.png" alt="" /></button>' +
-        '<button class="pd-thumb" aria-label="View high-performance compounds"><img src="Untitled design-3.png" alt="" /></button>' +
-        '<button class="pd-thumb" aria-label="View engineered polymer compounds"><img src="Untitled design.png" alt="" /></button>';
+        '<button class="pd-thumb active" aria-label="View special compound formulation 1"><img src="ABOUT SPECIAL COMPOUNDS 1.png" alt="" /></button>' +
+        '<button class="pd-thumb" aria-label="View special compound formulation 2"><img src="ABOUT SPECIAL COMPOUNDS 2.png" alt="" /></button>' +
+        '<button class="pd-thumb" aria-label="View special compound formulation 3"><img src="ABOUT SPECIAL COMPOUNDS 3.png" alt="" /></button>' +
+        '<button class="pd-thumb" aria-label="View special compound formulation 4"><img src="ABOUT SPECIAL COMPOUNDS 4.png" alt="" /></button>' +
+        '<button class="pd-thumb" aria-label="View special compound formulation 5"><img src="ABOUT SPECIAL COMPOUNDS 5.png" alt="" /></button>';
     }
 
     var specIntro = document.querySelector('#tab-specifications .pd-overview-desc');
