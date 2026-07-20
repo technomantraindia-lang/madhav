@@ -624,7 +624,7 @@ body.pd-special-page .pd-process-step span {
 }
 .pd-overview-main-img img {
   width: 100%;
-  height: 280px;
+  height: 450px;
   object-fit: cover;
   display: block;
 }
@@ -1850,6 +1850,7 @@ body.pd-special-page .pd-process-step span {
 }
 
 @media (max-width: 768px) {
+  .pd-overview-main-img img { height: 300px; }
   .pd-hero-wrap { min-height: auto; }
   .pd-hero-features { gap: 16px; }
   .pd-benefits-box {
