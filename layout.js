@@ -187,8 +187,6 @@
                 '<option value="profiles-building">Profiles &amp; Building</option>' +
                 '<option value="roofing">Roofing</option>' +
                 '<option value="molding">Soft PVC Molding</option>' +
-                '<option value="medical">Medical</option>' +
-                '<option value="agriculture">Agriculture</option>' +
                 '<option value="other">Other</option>' +
               '</select>' +
             '</label>' +

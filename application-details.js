@@ -98,38 +98,6 @@
         { img: 'Untitled design/4.png', label: 'Footwear' },
         { img: 'Wide Range of Applications 4.png', label: 'Custom Moldings' }
       ]
-    },
-    medical: {
-      title: 'Medical',
-      accent: 'Devices',
-      crumb: 'Medical Devices',
-      desc: 'Carefully formulated compounds for selected medical and healthcare devices where purity, consistency, and process control matter.',
-      image: 'Untitled design/7.png',
-      why: 'Produced with controlled processes and quality checks to support demanding medical-grade applications and compliance-focused customers.',
-      examples: [
-        { img: 'Untitled design/7.png', label: 'Medical Tubing' },
-        { img: 'Wide Range of Applications 7.png', label: 'Healthcare Parts' },
-        { img: 'Untitled design/2.png', label: 'Flexible Profiles' },
-        { img: 'Wide Range of Applications 2.png', label: 'Device Housings' },
-        { img: 'Untitled design/6.png', label: 'Protective Covers' },
-        { img: 'Wide Range of Applications 6.png', label: 'Accessories' }
-      ]
-    },
-    agriculture: {
-      title: 'Construction',
-      accent: 'Materials',
-      crumb: 'Construction Materials',
-      desc: 'PVC compounds for construction sheets, profiles, and related materials that need weather resistance, strength, and long outdoor service.',
-      image: 'Untitled design/8.png',
-      why: 'Built for outdoor and site service with impact strength and durability suitable for construction and infrastructure use.',
-      examples: [
-        { img: 'Untitled design/8.png', label: 'Building Sheets' },
-        { img: 'Wide Range of Applications 8.png', label: 'Construction Profiles' },
-        { img: 'Untitled design/2.png', label: 'Panel Systems' },
-        { img: 'Wide Range of Applications 2.png', label: 'Waterproof Layers' },
-        { img: 'Untitled design/5.png', label: 'Site Coverings' },
-        { img: 'Wide Range of Applications 5.png', label: 'Structural Parts' }
-      ]
     }
   };
 

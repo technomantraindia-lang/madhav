@@ -507,7 +507,6 @@
     var appItems = [
       ['madhav_applications_process_icons_svg_pack/agriculture.svg', 'Automotive Parts'],
       ['madhav_applications_process_icons_svg_pack/wire_cable.svg', 'Electrical Enclosures'],
-      ['madhav_applications_process_icons_svg_pack/medical.svg', 'Medical Devices'],
       ['madhav_applications_process_icons_svg_pack/molding_others.svg', 'Food-Grade Components'],
       ['madhav_applications_process_icons_svg_pack/consistent_performance.svg', 'Industrial Equipment'],
       ['madhav_applications_process_icons_svg_pack/footwear.svg', 'Consumer Products'],
