@@ -370,7 +370,7 @@
       ['PVC Compound.jpg', 'PVC Compound', 'product-details.html'],
       ['Untitled design-3.png', 'RP Compound', 'rp-compound-details.html'],
       ['Pipes & Fittings Compounds.jpg', 'Pipes & Fittings Compounds', 'product-details.html'],
-      ['Special Compounds.jpg', 'Special Compounds', 'products.html?cat=special-compound']
+      ['Special Compounds.jpg', 'Special Compounds', 'special-compounds-details.html']
     ];
     document.querySelectorAll('.pd-related-card').forEach(function (card, index) {
       if (!relatedData[index]) return;
@@ -394,8 +394,215 @@
     if (brochureLinks[0]) brochureLinks[0].lastChild.textContent = ' PVC Masterbatches Product Brochure (PDF)';
   }
 
+  function applySpecialCompoundsPage() {
+    if (productKey !== 'special-compounds') return;
+
+    document.body.classList.add('pd-special-page');
+    document.title = 'Special Compounds – Madhav Polymers | Custom Engineered Solutions';
+
+    var description = document.querySelector('meta[name="description"]');
+    if (description) {
+      description.content = 'Explore custom-engineered special PVC compounds with superior mechanical properties, heat and chemical resistance, and application-focused performance.';
+    }
+
+    var breadcrumbCurrent = document.querySelector('.pd-breadcrumb span:last-child');
+    var grade = document.querySelector('.pd-grade-badge');
+    var heroTitle = document.querySelector('.pd-hero-title');
+    var heroDesc = document.querySelector('.pd-hero-desc');
+    var heroFeatures = document.querySelector('.pd-hero-features');
+    var heroBackground = document.querySelector('.pd-hero-bg');
+    var benefits = document.querySelector('.pd-benefits-box ul');
+    var forms = document.querySelector('.pd-forms-box');
+
+    if (heroBackground) {
+      heroBackground.src = 'SPECAIL COMPUNDS BANNER.png';
+      heroBackground.alt = 'Special compound granules and engineered polymer products';
+    }
+    if (breadcrumbCurrent) breadcrumbCurrent.textContent = 'Special Compounds';
+    if (grade) grade.textContent = 'PREMIUM GRADE';
+    if (heroTitle) heroTitle.textContent = 'Special Compounds';
+    if (heroDesc) {
+      heroDesc.textContent = 'Custom-engineered PVC compounds designed to meet unique performance, processing, and compliance requirements across diverse applications.';
+    }
+    if (heroFeatures) {
+      heroFeatures.innerHTML =
+        '<div class="pd-hero-feat"><div class="pd-feat-icon"><img src="madhav_product_hero_icons_svg/tailored_for_every_need.svg" alt="" /></div><span>Custom<br>Formulations</span></div>' +
+        '<div class="pd-hero-feat"><div class="pd-feat-icon"><img src="madhav_product_hero_icons_svg/advanced_technology.svg" alt="" /></div><span>High<br>Performance</span></div>' +
+        '<div class="pd-hero-feat"><div class="pd-feat-icon"><img src="madhav_product_hero_icons_svg/consistent_quality.svg" alt="" /></div><span>Application<br>Focused</span></div>' +
+        '<div class="pd-hero-feat"><div class="pd-feat-icon"><img src="madhav_quality_icons_svg_pack/consistent_quality_shield.svg" alt="" /></div><span>Consistent<br>Quality</span></div>';
+    }
+    if (benefits) {
+      benefits.innerHTML = [
+        'Tailor-Made Formulations',
+        'Superior Mechanical Properties',
+        'Heat & Chemical Resistance',
+        'Enhanced Durability',
+        'Cost-Effective Solutions'
+      ].map(function (item) {
+        return '<li>' + checkIcon() + item + '</li>';
+      }).join('');
+    }
+    if (forms) forms.innerHTML = '<strong>Available Forms:</strong> Granules | Pellets';
+
+    var overviewLabel = document.querySelector('#tab-overview .section-label');
+    var overviewTitle = document.querySelector('#tab-overview h2');
+    var overviewDesc = document.querySelector('#tab-overview .pd-overview-desc');
+    var overviewChecks = document.querySelector('#tab-overview .pd-check-list');
+    var mainImage = document.querySelector('.pd-overview-main-img img');
+    var gallery = document.querySelector('.pd-thumb-gallery');
+
+    if (overviewLabel) overviewLabel.textContent = 'ABOUT SPECIAL COMPOUNDS';
+    if (overviewTitle) overviewTitle.innerHTML = 'Engineered Solutions.<br><span class="purple">Beyond Standards.</span>';
+    if (overviewDesc) {
+      overviewDesc.textContent = 'Our Special Compounds are custom-formulated to deliver exceptional performance for unique and demanding applications. From flame retardancy to UV stability, we engineer solutions that exceed industry standards.';
+    }
+    if (overviewChecks) {
+      overviewChecks.innerHTML = [
+        'Customized for Specific Needs',
+        'Enhanced Mechanical Properties',
+        'Superior Heat & Chemical Resistance',
+        'Optimized for Processing',
+        'RoHS & REACH Compliant'
+      ].map(function (item) {
+        return '<li>' + checkIcon() + item + '</li>';
+      }).join('');
+    }
+    if (mainImage) {
+      mainImage.src = 'Special Compounds.jpg';
+      mainImage.alt = 'Special compound formulations and engineered polymer solutions';
+    }
+    if (gallery) {
+      gallery.innerHTML =
+        '<button class="pd-thumb active" aria-label="View special compound formulations"><img src="Special Compounds.jpg" alt="" /></button>' +
+        '<button class="pd-thumb" aria-label="View custom compound granules"><img src="Untitled design-1.png" alt="" /></button>' +
+        '<button class="pd-thumb" aria-label="View high-performance compounds"><img src="Untitled design-3.png" alt="" /></button>' +
+        '<button class="pd-thumb" aria-label="View engineered polymer compounds"><img src="Untitled design.png" alt="" /></button>';
+    }
+
+    var specIntro = document.querySelector('#tab-specifications .pd-overview-desc');
+    if (specIntro) {
+      specIntro.textContent = 'Our special compounds are available in custom-engineered grades for flame retardancy, UV stability, high impact performance, and other demanding application requirements.';
+    }
+    var specCards = document.querySelector('#tab-specifications .pd-spec-grid');
+    if (specCards) {
+      specCards.innerHTML =
+        '<div class="pd-spec-card"><strong>Custom Formulations</strong><span>Tailor-made for specific needs</span></div>' +
+        '<div class="pd-spec-card"><strong>Performance Grades</strong><span>Standard &amp; high-performance options</span></div>' +
+        '<div class="pd-spec-card"><strong>Processing</strong><span>Extrusion, Injection &amp; Blow Molding</span></div>' +
+        '<div class="pd-spec-card"><strong>Specialty Additives</strong><span>FR, UV, Antistatic &amp; more</span></div>' +
+        '<div class="pd-spec-card"><strong>Packaging</strong><span>25 kg Bags, Custom Bulk</span></div>' +
+        '<div class="pd-spec-card"><strong>Available Forms</strong><span>Granules &amp; Pellets</span></div>';
+    }
+
+    var variants = document.getElementById('variant-track');
+    if (variants) {
+      variants.innerHTML =
+        '<article class="pd-variant-card active"><h3>Flame Retardant Compounds</h3><p>Engineered for fire safety in cables, building, and industrial applications.</p><a href="#" class="pd-learn-more">Learn More <span>&#8594;</span></a></article>' +
+        '<article class="pd-variant-card"><h3>UV Stabilized Compounds</h3><p>Excellent weather resistance for outdoor and long-life applications.</p><a href="#" class="pd-learn-more">Learn More <span>&#8594;</span></a></article>' +
+        '<article class="pd-variant-card"><h3>High Impact Compounds</h3><p>Superior toughness for demanding mechanical applications.</p><a href="#" class="pd-learn-more">Learn More <span>&#8594;</span></a></article>' +
+        '<article class="pd-variant-card"><h3>Heat Stabilized Compounds</h3><p>Enhanced thermal stability for high-temperature processing.</p><a href="#" class="pd-learn-more">Learn More <span>&#8594;</span></a></article>';
+    }
+
+    var appItems = [
+      ['madhav_applications_process_icons_svg_pack/agriculture.svg', 'Automotive Parts'],
+      ['madhav_applications_process_icons_svg_pack/wire_cable.svg', 'Electrical Enclosures'],
+      ['madhav_applications_process_icons_svg_pack/medical.svg', 'Medical Devices'],
+      ['madhav_applications_process_icons_svg_pack/molding_others.svg', 'Food-Grade Components'],
+      ['madhav_applications_process_icons_svg_pack/consistent_performance.svg', 'Industrial Equipment'],
+      ['madhav_applications_process_icons_svg_pack/footwear.svg', 'Consumer Products'],
+      ['madhav_applications_process_icons_svg_pack/profile_building.svg', 'Industrial Profiles'],
+      ['madhav_applications_process_icons_svg_pack/pipes_fittings.svg', 'Blow Molding']
+    ];
+    var inlineApps = document.querySelector('.pd-app-grid-inline');
+    var appGrid = document.querySelector('.pd-triple-section .pd-app-grid');
+    if (inlineApps) {
+      inlineApps.innerHTML = appItems.slice(0, 6).map(function (item) {
+        return '<div class="pd-app-item"><img src="' + item[0] + '" alt="" width="40" height="40" /><span>' + item[1] + '</span></div>';
+      }).join('');
+    }
+    if (appGrid) {
+      appGrid.innerHTML = appItems.map(function (item) {
+        return '<div class="pd-app-pill"><div class="pd-app-pill-icon"><img src="' + item[0] + '" alt="" /></div><span>' + item[1] + '</span></div>';
+      }).join('');
+    }
+
+    var processFlow = document.querySelector('.pd-process-flow');
+    if (processFlow) {
+      var processItems = [
+        ['madhav_applications_process_icons_svg_pack/carefully_sourced_raw_materials.svg', 'Requirement Analysis'],
+        ['madhav_applications_process_icons_svg_pack/precision_formulation.svg', 'Custom Formulation'],
+        ['madhav_applications_process_icons_svg_pack/advanced_compounding.svg', 'Material Selection'],
+        ['madhav_applications_process_icons_svg_pack/rigorous_quality_checks.svg', 'Advanced Compounding'],
+        ['madhav_applications_process_icons_svg_pack/consistent_performance.svg', 'Quality Validation']
+      ];
+      processFlow.innerHTML = processItems.map(function (item, index) {
+        var step = '<div class="pd-process-step"><div class="pd-process-icon"><img src="' + item[0] + '" alt="" /></div><span>' + item[1] + '</span></div>';
+        var arrow = index < processItems.length - 1
+          ? '<div class="pd-process-arrow" aria-hidden="true"><img src="madhav_applications_process_icons_svg_pack/process_arrow.svg" alt="" /></div>'
+          : '';
+        return step + arrow;
+      }).join('');
+    }
+
+    var performance = document.querySelector('.pd-performance-bars');
+    if (performance) {
+      performance.innerHTML = [
+        ['Mechanical Strength', 95],
+        ['Heat Resistance', 90],
+        ['Chemical Resistance', 92],
+        ['Dimensional Stability', 93],
+        ['Surface Finish Quality', 90]
+      ].map(function (item, index) {
+        var gradientClass = index === 3 || index === 4 ? ' pd-perf-fill--gradient' : '';
+        return '<div class="pd-perf-item"><div class="pd-perf-label"><span>' + item[0] + '</span><span>' + item[1] + '%</span></div><div class="pd-perf-bar"><div class="pd-perf-fill' + gradientClass + '" style="width:' + item[1] + '%"></div></div></div>';
+      }).join('');
+    }
+
+    var technicalRows = [
+      ['Density', 'ASTM D792', 'g/cm³', '1.35 – 1.55'],
+      ['Tensile Strength', 'ASTM D638', 'MPa', '45 – 60'],
+      ['Elongation at Break', 'ASTM D638', '%', '80 – 150'],
+      ['Flexural Strength', 'ASTM D790', 'MPa', '70 – 90'],
+      ['Impact Strength (Notched)', 'ASTM D256', 'J/m', '50 – 80'],
+      ['Heat Deflection Temperature', 'ASTM D648', '°C', '65 – 85']
+    ];
+    document.querySelectorAll('.pd-data-table tbody').forEach(function (tbody) {
+      tbody.innerHTML = technicalRows.map(function (row) {
+        return '<tr><td>' + row[0] + '</td><td>' + row[1] + '</td><td>' + row[2] + '</td><td>' + row[3] + '</td></tr>';
+      }).join('');
+    });
+
+    var relatedData = [
+      ['PVC Compound.jpg', 'PVC Compounds', 'product-details.html'],
+      ['PVC Masterbatches.jpg', 'PVC Masterbatches', 'pvc-masterbatches-details.html'],
+      ['Pipes & Fittings Compounds.jpg', 'Pipes & Fittings Compounds', 'product-details.html'],
+      ['Untitled design-3.png', 'RP Compound', 'rp-compound-details.html']
+    ];
+    document.querySelectorAll('.pd-related-card').forEach(function (card, index) {
+      if (!relatedData[index]) return;
+      card.querySelector('img').src = relatedData[index][0];
+      card.querySelector('img').alt = relatedData[index][1];
+      card.querySelector('h4').textContent = relatedData[index][1];
+      card.querySelector('a').href = relatedData[index][2];
+    });
+
+    var ctaImage = document.querySelector('.pd-cta-img');
+    var ctaTitle = document.querySelector('.pd-cta-text h2');
+    var ctaCopy = document.querySelector('.pd-cta-text p');
+    if (ctaImage) {
+      ctaImage.src = 'ABOUT PVC MASTERBATCHES 2.jpg';
+      ctaImage.alt = 'Special compound granules';
+    }
+    if (ctaTitle) ctaTitle.textContent = 'Need a Custom Special Compound?';
+    if (ctaCopy) ctaCopy.textContent = 'Our experts will help you develop the right solution for your application.';
+
+    var brochureLinks = document.querySelectorAll('.pd-download-item');
+    if (brochureLinks[0]) brochureLinks[0].lastChild.textContent = ' Special Compounds Product Brochure (PDF)';
+  }
+
   applyRpCompoundPage();
   applyMasterbatchPage();
+  applySpecialCompoundsPage();
 
   /* ---- Tabs ---- */
   var tabBtns = document.querySelectorAll('.pd-tab-btn');

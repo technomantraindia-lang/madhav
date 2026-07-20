@@ -246,6 +246,97 @@ body.pd-masterbatch-page .pd-process-step span {
   color: #211f2b;
 }
 
+body.pd-special-page .pd-hero-left {
+  max-width: 640px;
+}
+
+body.pd-special-page .pd-hero-grid {
+  grid-template-columns: minmax(0, 1.15fr) minmax(380px, 0.85fr);
+}
+
+body.pd-special-page .pd-hero-features {
+  gap: 18px;
+}
+
+body.pd-special-page .pd-hero-feat {
+  flex: 1 1 125px;
+}
+
+body.pd-special-page .pd-hero-bg {
+  object-position: center center;
+  filter: saturate(1.08) contrast(1.05);
+}
+
+body.pd-special-page .pd-hero-overlay {
+  background: linear-gradient(
+    90deg,
+    rgba(28, 8, 82, 0.94) 0%,
+    rgba(48, 18, 118, 0.82) 44%,
+    rgba(61, 31, 140, 0.38) 72%,
+    rgba(22, 6, 68, 0.14) 100%
+  );
+}
+
+body.pd-special-page .pd-feat-icon {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: #ff7a1a;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+body.pd-special-page .pd-feat-icon img {
+  filter: brightness(0) invert(1);
+  opacity: 1;
+}
+
+body.pd-special-page .pd-overview-main-img img {
+  object-fit: cover;
+  object-position: center;
+}
+
+body.pd-special-page .pd-app-pill {
+  min-height: 60px;
+  gap: 13px;
+  padding: 7px 16px 7px 7px;
+}
+
+body.pd-special-page .pd-app-pill-icon {
+  width: 46px;
+  height: 46px;
+  border-width: 2px;
+  border-color: #a98ce8;
+}
+
+body.pd-special-page .pd-app-pill-icon img {
+  width: 32px;
+  height: 32px;
+  filter: saturate(1.7) contrast(1.3);
+}
+
+body.pd-special-page .pd-app-pill span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #24232f;
+}
+
+body.pd-special-page .pd-process-icon {
+  width: 94px;
+  height: 94px;
+  border-color: #a98ce8;
+  background: #f3efff;
+}
+
+body.pd-special-page .pd-process-icon img {
+  width: 48px;
+  height: 48px;
+  filter: saturate(1.8) contrast(1.35);
+}
+
+body.pd-special-page .pd-process-step span {
+  font-size: 15px;
+  font-weight: 700;
+  color: #211f2b;
+}
+
 .pd-hero-cta {
   display: flex;
   gap: 14px;
@@ -1693,6 +1784,7 @@ body.pd-masterbatch-page .pd-process-step span {
   .pd-hero-grid { grid-template-columns: 1fr; }
   body.pd-rp-page .pd-hero-grid { grid-template-columns: 1fr; }
   body.pd-masterbatch-page .pd-hero-grid { grid-template-columns: 1fr; }
+  body.pd-special-page .pd-hero-grid { grid-template-columns: 1fr; }
   .pd-hero-right { min-height: 280px; margin-top: 20px; align-items: center; }
   .pd-benefits-box { right: 10%; }
   .pd-overview-grid { grid-template-columns: 1fr; }

@@ -28,7 +28,7 @@
                 '<li><a href="product-details.html" id="nav-pvc">PVC Compound</a></li>' +
                 '<li><a href="rp-compound-details.html" id="nav-rp">RP Compound</a></li>' +
                 '<li><a href="pvc-masterbatches-details.html" id="nav-mb">PVC Masterbatches</a></li>' +
-                '<li><a href="products.html?cat=special-compound" id="nav-sp">Special Compounds</a></li>' +
+                '<li><a href="special-compounds-details.html" id="nav-sp">Special Compounds</a></li>' +
               '</ul>' +
             '</li>' +
             '<li class="has-dropdown">' +
@@ -95,7 +95,7 @@
             '<li><a href="product-details.html" id="foot-pvc">PVC Compound</a></li>' +
             '<li><a href="rp-compound-details.html" id="foot-rp">RP Compound</a></li>' +
             '<li><a href="pvc-masterbatches-details.html" id="foot-mb">PVC Masterbatches</a></li>' +
-            '<li><a href="products.html?cat=special-compound" id="foot-sp">Special Compounds</a></li>' +
+            '<li><a href="special-compounds-details.html" id="foot-sp">Special Compounds</a></li>' +
           '</ul>' +
         '</div>' +
         '<div class="footer-col contact-col">' +
