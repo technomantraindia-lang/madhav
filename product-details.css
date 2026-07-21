@@ -150,9 +150,30 @@ body.pd-rp-page .pd-feat-icon img {
   opacity: 1;
 }
 
+body.pd-rp-page .pd-overview-main-img {
+  background: #fff;
+  border: 1px solid #ececf2;
+}
+
 body.pd-rp-page .pd-overview-main-img img {
   object-fit: contain;
-  background: #f6f6f6;
+  object-position: center;
+  background: #fff;
+}
+
+body.pd-rp-page .pd-thumb {
+  background: #fff;
+  border: 2px solid #e8e8f0;
+}
+
+body.pd-rp-page .pd-thumb.active,
+body.pd-rp-page .pd-thumb:hover {
+  border-color: var(--purple);
+}
+
+body.pd-rp-page .pd-thumb img {
+  object-fit: contain;
+  background: #fff;
 }
 
 body.pd-masterbatch-page .pd-hero-left {

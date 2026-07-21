@@ -33,8 +33,8 @@
     var forms = document.querySelector('.pd-forms-box');
 
     if (heroBackground) {
-      heroBackground.src = 'RP compund banner section.png';
-      heroBackground.alt = 'RP compound pellets, pipes, and fittings';
+      heroBackground.src = 'pvc page.png';
+      heroBackground.alt = 'PVC compound pellets, cables, and polymer products';
     }
     if (breadcrumbCurrent) breadcrumbCurrent.textContent = 'RP Compound';
     if (grade) grade.textContent = 'PREMIUM GRADE';
@@ -93,8 +93,9 @@
       gallery.innerHTML =
         '<button class="pd-thumb active" aria-label="View pressure pipes and fittings"><img src="Wide Range of Applications 1.png" alt="" /></button>' +
         '<button class="pd-thumb" aria-label="View industrial pipes"><img src="pipe 7 fitting.png" alt="" /></button>' +
-        '<button class="pd-thumb" aria-label="View pipe fittings"><img src="Untitled design/2.png" alt="" /></button>' +
-        '<button class="pd-thumb" aria-label="View RP pellets"><img src="white_pvc_pellets_card_cut_1024x1536.png" alt="" /></button>';
+        '<button class="pd-thumb" aria-label="View pipe fittings"><img src="Pipes &amp; Fittings Compounds.jpg" alt="" /></button>' +
+        '<button class="pd-thumb" aria-label="View RP pellets"><img src="white_pvc_pellets_card_cut_1024x1536.png" alt="" /></button>' +
+        '<button class="pd-thumb" aria-label="View wire and cables"><img src="Wire &amp; Cables.png" alt="" /></button>';
     }
 
     var specIntro = document.querySelector('#tab-specifications .pd-overview-desc');
