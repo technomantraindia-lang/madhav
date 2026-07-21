@@ -41,6 +41,7 @@
               '</ul>' +
             '</li>' +
             '<li><a href="resources.html" class="' + navClass('resources').trim() + '" id="nav-resources">Resources</a></li>' +
+            '<li><a href="certificates.html" class="' + navClass('certificates').trim() + '" id="nav-certificates">Certificates</a></li>' +
             '<li><a href="quality.html" class="' + navClass('quality').trim() + '" id="nav-quality">Quality</a></li>' +
             '<li><a href="contact-us.html" class="' + navClass('contact').trim() + '" id="nav-contact">Contact Us</a></li>' +
           '</ul>' +
@@ -86,6 +87,7 @@
             '<li><a href="applications.html" id="foot-apps">Applications</a></li>' +
             '<li><a href="quality.html" id="foot-quality">Quality</a></li>' +
             '<li><a href="resources.html" id="foot-resources">Resources</a></li>' +
+            '<li><a href="certificates.html" id="foot-certificates">Certificates</a></li>' +
             '<li><a href="contact-us.html" id="foot-contact">Contact Us</a></li>' +
           '</ul>' +
         '</div>' +
